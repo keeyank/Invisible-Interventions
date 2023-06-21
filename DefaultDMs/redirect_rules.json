@@ -1,0 +1,8 @@
+[
+    {
+      "id": 4,
+      "priority": 1,
+      "action": { "type": "redirect", "redirect": { "url": "https://www.instagram.com/direct/inbox/" } },
+      "condition": { "regexFilter": "instagram\\.com\\/?$", "resourceTypes": ["main_frame"] }
+    }
+  ]
