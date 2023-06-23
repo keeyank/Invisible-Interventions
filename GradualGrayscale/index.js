@@ -15,12 +15,12 @@ const updateGrayscale = (delta = 0.01) => {
   if (grayscale >= 1) {
     // If the grayscale value reaches 100%
     // alert("You've reached your limit!");
-    return False;
+    return false;
   } else {
     console.log(grayscale);
     grayscale += delta;
     overlayElement.style.backdropFilter = `grayscale(${grayscale})`;
-    return True;
+    return true;
   }
 };
 
