@@ -14,5 +14,11 @@
       "js": ["scripts/content.js"],
       "matches": ["https://www.instagram.com/*"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "html/dialog-1.html" ],
+      "matches": [ "https://www.instagram.com/*" ]
+    }
   ]
 }

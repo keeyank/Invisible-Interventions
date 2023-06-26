@@ -1,8 +1,17 @@
-// Create a new div element
-const div = document.createElement('div');
+//window.prompt("sometext","defaultText");
 
-// Set the content of the div
-div.innerHTML = 'This is an injected div!';
+// Create the dialog box container
+const dialogBoxContainer = document.createElement('div');
+dialogBoxContainer.id = 'dialogBoxContainer';
+document.body.appendChild(dialogBoxContainer);
 
-// Inject the div into the document body
-document.body.appendChild(div);
+// Load the popup.html file into the dialog box container
+fetch(chrome.runtime.getURL('html/dialog-1.html'))
+  .then(response => response.text())
+  .then(html => {
+    dialogBoxContainer.innerHTML = html;
+    console.log('html', html);
+    // const script = document.createElement('script');
+    // script.src = chrome.extension.getURL('popup.js');
+    // dialogBoxContainer.appendChild(script);
+  });
