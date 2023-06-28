@@ -1,0 +1,7 @@
+{
+	"name": "time-limit",
+	"version": "1.0.0",
+	"devDependencies": {
+		"@types/chrome": "0.0.35"
+	}
+}
