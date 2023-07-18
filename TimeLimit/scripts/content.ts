@@ -1,3 +1,40 @@
+/**** Helper Functions ***/
+
+function numToStr(number: number, digits: number): string {
+    const numberString = number.toString();
+    const padding = digits - numberString.length;
+    
+    if (padding > 0) {
+        return '0'.repeat(padding) + numberString;
+    }
+    
+    return numberString;
+}
+
+// Code to wait for elements to load
+// https://stackoverflow.com/questions/5525071/how-to-wait-until-an-element-exists
+function waitForElm(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
+/*** Intervention Code ***/
+
 // Create the dialog box container
 const dialogBoxContainer = document.createElement('div');
 dialogBoxContainer.id = 'dialogBoxContainer';
@@ -7,12 +44,14 @@ document.body.appendChild(dialogBoxContainer);
 const timerBoxContainer = document.createElement('div');
 timerBoxContainer.id = 'timerBoxContainer';
 
-// Append it to the search bar
-const searchBar = document.querySelector('._ab18._ab1b');
-searchBar.appendChild(timerBoxContainer);
+// Append timer box to the search bar
+waitForElm('._ab18._ab1b').then((searchBar : HTMLElement) => {
+    searchBar.appendChild(timerBoxContainer);
+});
 
-let timeInMins = 0;
-// Load the dialog-1.html file into the dialog box container
+let timeInMins : number = 0;
+let timeInSecs : number = 0;
+
 fetch(chrome.runtime.getURL('html/dialog-1.html'))
     .then(response => response.text())
     .then(html => {
@@ -31,7 +70,9 @@ fetch(chrome.runtime.getURL('html/dialog-1.html'))
             // Obtain the time limit value
             const inputElement = <HTMLInputElement>document.getElementById('timeLimit');
             timeInMins = +(inputElement.value !== '' ? inputElement.value : inputElement.placeholder);
-
+            // PLACEHOLDER VALS FOR TESTING PURPOSES - REMOVE THIS LINE LATER
+            timeInMins = 0
+            timeInSecs = 10
             closeDialog();
         });
     });
@@ -40,19 +81,32 @@ fetch(chrome.runtime.getURL('html/timer.html'))
     .then(response => response.text())
     .then(html => {
         timerBoxContainer.innerHTML = html;
-
-        /*
-        Have a countdown timer that counts down from the time limit value
-        in both minutes and seconds. 
-        This countdown timer will also update the countdown timer html element
-        */
-
-        // Get the necessary elements
-        const timerMinutes = document.getElementById('minutes');
-
-        // remainingTime = new Date()
-        // remainingTime.setMinutes(timeInMins);
-        // console.log(remainingTime);
-        
-        //timerMinutes.textContent = remainingTime.getMinutes();
     });
+
+// Loop that runs whenever timeInMins and timeInSecs are not 0
+setInterval(function() {
+    if (timeInMins !== 0 || timeInSecs !== 0) {
+        if (timeInSecs === 0) {
+            timeInMins--;
+            timeInSecs = 59;
+            // Update the timer
+            let timerMinutes = document.getElementById('minutes');
+            let timerSeconds = document.getElementById('seconds');
+            timerMinutes.textContent = numToStr(timeInMins, 2);
+            timerSeconds.textContent = numToStr(timeInSecs, 2);
+            
+        } else {
+            timeInSecs--;
+            // Update the timer
+            let timerSeconds = document.getElementById('seconds');
+            timerSeconds.textContent = numToStr(timeInSecs, 2);
+        }
+    }
+    else {
+        let dialogBox : HTMLElement = document.getElementById('dialogBox')
+        if (dialogBox.style.display === 'none') {
+            dialogBox.style.display = 'block';
+        }
+    }
+}, 1000);
+

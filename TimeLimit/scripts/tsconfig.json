@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "module": "esnext",
         "target": "esnext",
         "lib": ["esnext", "dom"],
         "types": ["chrome"]
