@@ -1,4 +1,7 @@
-/**** Helper Functions ***/
+/**** Constants ****/
+const timerDoneText : string = "Your time is up!"
+
+/**** Helper Functions ****/
 
 function numToStr(number: number, digits: number): string {
     const numberString = number.toString();
@@ -35,10 +38,14 @@ function waitForElm(selector) {
 
 /*** Intervention Code ***/
 
-// Create the dialog box container
+// Create the dialog box container for the 2 popups
 const dialogBoxContainer = document.createElement('div');
 dialogBoxContainer.id = 'dialogBoxContainer';
 document.body.appendChild(dialogBoxContainer);
+
+const dialogBoxContainer2 = document.createElement('div')
+dialogBoxContainer2.id = 'dialogBoxContainer2';
+document.body.appendChild(dialogBoxContainer2);
 
 // Create the timer box container
 const timerBoxContainer = document.createElement('div');
@@ -77,6 +84,13 @@ fetch(chrome.runtime.getURL('html/dialog-1.html'))
         });
     });
 
+fetch(chrome.runtime.getURL('html/dialog-2.html'))
+    .then(response => response.text())
+    .then(html => {
+        dialogBoxContainer2.innerHTML = html;
+        document.getElementById('dialogBox2').style.display == 'none';
+    });
+
 fetch(chrome.runtime.getURL('html/timer.html'))
     .then(response => response.text())
     .then(html => {
@@ -103,10 +117,12 @@ setInterval(function() {
         }
     }
     else {
-        let dialogBox : HTMLElement = document.getElementById('dialogBox')
-        if (dialogBox.style.display === 'none') {
-            dialogBox.style.display = 'block';
+        // TODO: Logic that makes dialogBox2 only appear after the initial log-in
+        let dialogBox2 : HTMLElement = document.getElementById('dialogBox2')
+        if (dialogBox2 && dialogBox2.style.display === 'none') {
+            dialogBox2.style.display = 'block';
         }
     }
 }, 1000);
 
+// TODO: Logic that makes this work if they navigate around instagram. 

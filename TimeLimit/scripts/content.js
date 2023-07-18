@@ -1,4 +1,6 @@
-/**** Helper Functions ***/
+/**** Constants ****/
+const timerDoneText = "Your time is up!";
+/**** Helper Functions ****/
 function numToStr(number, digits) {
     const numberString = number.toString();
     const padding = digits - numberString.length;
@@ -27,10 +29,13 @@ function waitForElm(selector) {
     });
 }
 /*** Intervention Code ***/
-// Create the dialog box container
+// Create the dialog box container for the 2 popups
 const dialogBoxContainer = document.createElement('div');
 dialogBoxContainer.id = 'dialogBoxContainer';
 document.body.appendChild(dialogBoxContainer);
+const dialogBoxContainer2 = document.createElement('div');
+dialogBoxContainer2.id = 'dialogBoxContainer2';
+document.body.appendChild(dialogBoxContainer2);
 // Create the timer box container
 const timerBoxContainer = document.createElement('div');
 timerBoxContainer.id = 'timerBoxContainer';
@@ -40,31 +45,33 @@ waitForElm('._ab18._ab1b').then((searchBar) => {
 });
 let timeInMins = 0;
 let timeInSecs = 0;
-function createDialog() {
-    fetch(chrome.runtime.getURL('html/dialog-1.html'))
-        .then(response => response.text())
-        .then(html => {
-        dialogBoxContainer.innerHTML = html;
-        // Get the necessary elements
-        const dialogBox = document.getElementById('dialogBox');
-        const submitBtn = document.getElementById('submitBtn');
-        // Function to close the dialog box
-        function closeDialog() {
-            dialogBox.style.display = 'none';
-        }
-        submitBtn.addEventListener('click', function () {
-            // Obtain the time limit value
-            const inputElement = document.getElementById('timeLimit');
-            timeInMins = +(inputElement.value !== '' ? inputElement.value : inputElement.placeholder);
-            // PLACEHOLDER VALS FOR TESTING PURPOSES - REMOVE THIS LINE LATER
-            timeInMins = 0;
-            timeInSecs = 10;
-            closeDialog();
-        });
+fetch(chrome.runtime.getURL('html/dialog-1.html'))
+    .then(response => response.text())
+    .then(html => {
+    dialogBoxContainer.innerHTML = html;
+    // Get the necessary elements
+    const dialogBox = document.getElementById('dialogBox');
+    const submitBtn = document.getElementById('submitBtn');
+    // Function to close the dialog box
+    function closeDialog() {
+        dialogBox.style.display = 'none';
+    }
+    submitBtn.addEventListener('click', function () {
+        // Obtain the time limit value
+        const inputElement = document.getElementById('timeLimit');
+        timeInMins = +(inputElement.value !== '' ? inputElement.value : inputElement.placeholder);
+        // PLACEHOLDER VALS FOR TESTING PURPOSES - REMOVE THIS LINE LATER
+        timeInMins = 0;
+        timeInSecs = 10;
+        closeDialog();
     });
-}
-// Create the whenever this script is loaded
-createDialog();
+});
+fetch(chrome.runtime.getURL('html/dialog-2.html'))
+    .then(response => response.text())
+    .then(html => {
+    dialogBoxContainer2.innerHTML = html;
+    document.getElementById('dialogBox2').style.display == 'none';
+});
 fetch(chrome.runtime.getURL('html/timer.html'))
     .then(response => response.text())
     .then(html => {
@@ -90,11 +97,9 @@ setInterval(function () {
         }
     }
     else {
-        // TODO: Refactor, make it so createDialog only runs when it is indeed
-        // creating a dialog. 
-        let dialogBox = document.getElementById('dialogBox');
-        if (dialogBox.style.display === 'none') {
-            dialogBox.style.display = 'block';
+        let dialogBox2 = document.getElementById('dialogBox2');
+        if (dialogBox2 && dialogBox2.style.display === 'none') {
+            dialogBox2.style.display = 'block';
         }
     }
 }, 1000);

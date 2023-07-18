@@ -1,5 +1,5 @@
 /* Placeholder CSS */
-#dialogBox {
+#dialogBox, #dialogBox2 {
     position: fixed;
     top: 50%;
     left: 50%;
