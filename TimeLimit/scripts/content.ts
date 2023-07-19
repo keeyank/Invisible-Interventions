@@ -47,6 +47,8 @@ const dialogBoxContainer2 = document.createElement('div')
 dialogBoxContainer2.id = 'dialogBoxContainer2';
 document.body.appendChild(dialogBoxContainer2);
 
+let initialVisit : boolean = true;
+
 // Create the timer box container
 const timerBoxContainer = document.createElement('div');
 timerBoxContainer.id = 'timerBoxContainer';
@@ -77,6 +79,7 @@ fetch(chrome.runtime.getURL('html/dialog-1.html'))
             // Obtain the time limit value
             const inputElement = <HTMLInputElement>document.getElementById('timeLimit');
             timeInMins = +(inputElement.value !== '' ? inputElement.value : inputElement.placeholder);
+            initialVisit = false;
             // PLACEHOLDER VALS FOR TESTING PURPOSES - REMOVE THIS LINE LATER
             timeInMins = 0
             timeInSecs = 10
@@ -117,12 +120,16 @@ setInterval(function() {
         }
     }
     else {
-        // TODO: Logic that makes dialogBox2 only appear after the initial log-in
-        let dialogBox2 : HTMLElement = document.getElementById('dialogBox2')
-        if (dialogBox2 && dialogBox2.style.display === 'none') {
-            dialogBox2.style.display = 'block';
+        let dialogBox : HTMLElement;
+        if (initialVisit) {
+            dialogBox = document.getElementById('dialogBox')
+        }
+        else {
+            dialogBox = document.getElementById('dialogBox2')
+        }
+        if (dialogBox && 
+                window.getComputedStyle(dialogBox).getPropertyValue('display') === 'none') {
+            dialogBox.style.display = 'block';
         }
     }
 }, 1000);
-
-// TODO: Logic that makes this work if they navigate around instagram. 
