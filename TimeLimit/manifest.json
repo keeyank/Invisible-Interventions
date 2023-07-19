@@ -21,5 +21,8 @@
       "resources": [ "html/*" ],
       "matches": [ "https://www.instagram.com/*" ]
     }
+  ],
+  "permissions": [
+    "tabs"
   ]
 }

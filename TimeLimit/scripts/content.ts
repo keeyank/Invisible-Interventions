@@ -48,6 +48,7 @@ dialogBoxContainer2.id = 'dialogBoxContainer2';
 document.body.appendChild(dialogBoxContainer2);
 
 let initialVisit : boolean = true;
+let hideTimesup : boolean = false;
 
 // Create the timer box container
 const timerBoxContainer = document.createElement('div');
@@ -80,9 +81,10 @@ fetch(chrome.runtime.getURL('html/dialog-1.html'))
             const inputElement = <HTMLInputElement>document.getElementById('timeLimit');
             timeInMins = +(inputElement.value !== '' ? inputElement.value : inputElement.placeholder);
             initialVisit = false;
+            hideTimesup = false;
             // PLACEHOLDER VALS FOR TESTING PURPOSES - REMOVE THIS LINE LATER
-            timeInMins = 0
-            timeInSecs = 10
+            // timeInMins = 0
+            // timeInSecs = 4
             closeDialog();
         });
     });
@@ -92,6 +94,25 @@ fetch(chrome.runtime.getURL('html/dialog-2.html'))
     .then(html => {
         dialogBoxContainer2.innerHTML = html;
         document.getElementById('dialogBox2').style.display == 'none';
+
+        // Get the necessary elements
+        const continueBtn = document.getElementById('continueBtn');
+        const quitBtn = document.getElementById('quitBtn');
+
+        continueBtn.addEventListener('click', function() {
+            // Open the timerDialog
+            const timerDialog : HTMLElement = document.getElementById('dialogBox');
+            const timesupDialog : HTMLElement = document.getElementById('dialogBox2');
+            timerDialog.style.display = 'block';
+            timesupDialog.style.display = 'none';
+
+            hideTimesup = true;
+        });
+
+        quitBtn.addEventListener('click', function() {
+            // TODO: Close the tab
+            
+        });
     });
 
 fetch(chrome.runtime.getURL('html/timer.html'))
@@ -121,7 +142,7 @@ setInterval(function() {
     }
     else {
         let dialogBox : HTMLElement;
-        if (initialVisit) {
+        if (initialVisit || hideTimesup) {
             dialogBox = document.getElementById('dialogBox')
         }
         else {
