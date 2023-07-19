@@ -1,6 +1,3 @@
-/**** Constants ****/
-const timerDoneText : string = "Your time is up!"
-
 /**** Helper Functions ****/
 
 function numToStr(number: number, digits: number): string {
@@ -55,9 +52,7 @@ const timerBoxContainer = document.createElement('div');
 timerBoxContainer.id = 'timerBoxContainer';
 
 // Append timer box to the search bar
-waitForElm('._ab18._ab1b').then((searchBar : HTMLElement) => {
-    searchBar.appendChild(timerBoxContainer);
-});
+document.body.appendChild(timerBoxContainer);
 
 let timeInMins : number = 0;
 let timeInSecs : number = 0;

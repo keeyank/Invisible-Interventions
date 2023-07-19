@@ -1,5 +1,3 @@
-/**** Constants ****/
-const timerDoneText = "Your time is up!";
 /**** Helper Functions ****/
 function numToStr(number, digits) {
     const numberString = number.toString();
@@ -42,9 +40,10 @@ let hideTimesup = false;
 const timerBoxContainer = document.createElement('div');
 timerBoxContainer.id = 'timerBoxContainer';
 // Append timer box to the search bar
-waitForElm('._ab18._ab1b').then((searchBar) => {
-    searchBar.appendChild(timerBoxContainer);
-});
+document.body.appendChild(timerBoxContainer);
+// waitForElm('._ab18._ab1b').then((searchBar : HTMLElement) => {
+//     searchBar.appendChild(timerBoxContainer);
+// });
 let timeInMins = 0;
 let timeInSecs = 0;
 fetch(chrome.runtime.getURL('html/dialog-1.html'))
