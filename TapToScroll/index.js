@@ -70,7 +70,7 @@ ButtonGroupElement.style.cssText =
 // When clicked, the "taptoscroll" function is invoked.
 const PreviousButtonElement = document.createElement("div");
 PreviousButtonElement.style.cssText =
-  "width:50vw; height: 100%;background:black;display: flex;justify-content: center; align-items: center;text-align: center; border-right: solid 0.5px gray;";
+  "width:50vw; height: 100%;background:rgb(250, 250, 250); color: black; display: flex;justify-content: center; align-items: center;text-align: center; border-right: solid 0.5px gray;";
 PreviousButtonElement.innerHTML += "Previous";
 PreviousButtonElement.onclick = () => {
   moveToPreviousPost();
@@ -78,7 +78,7 @@ PreviousButtonElement.onclick = () => {
 
 const NextButtonElement = document.createElement("div");
 NextButtonElement.style.cssText =
-  "width:50vw; height: 100%;background:black;display: flex;justify-content: center; align-items: center;text-align: center; border-left: solid 0.5px gray;";
+  "width:50vw; height: 100%;background:rgb(250, 250, 250);color: black;display: flex;justify-content: center; align-items: center;text-align: center; border-left: solid 0.5px gray;";
 NextButtonElement.innerHTML += "Next";
 NextButtonElement.onclick = () => {
   moveToNextPost();
