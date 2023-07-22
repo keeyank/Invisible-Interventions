@@ -28,7 +28,7 @@ const updateGrayscale = (delta = 0.01) => {
 // This function facilitates the transition effect through touch interaction by updating
 // the grayscale value of the displayed content on each touch event.
 document.body.addEventListener("touchstart", (e) => {
-  updateGrayscale(0.05);
+  updateGrayscale(0.02);
 });
 
 // Time-based Transition
