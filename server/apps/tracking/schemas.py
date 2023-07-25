@@ -2,6 +2,9 @@ from pydantic import BaseModel
 from datetime import datetime
 
 class UsageBase(BaseModel):
+    user_id: int
+    session_begin: datetime
+    session_end: datetime
     pass
 
 class UsageCreate(UsageBase):
@@ -9,9 +12,6 @@ class UsageCreate(UsageBase):
 
 class Usage(UsageBase):
     id: int
-    user_id: int
-    session_begin: datetime
-    session_end: datetime
 
     class Config:
         orm_mode = True
