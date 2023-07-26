@@ -38,30 +38,27 @@ def session_update(db: Session, usage: schemas.UsageCreate):
                         WHERE user_id = {usage.user_id}
                         '''))
     # Note: If the query does not return a value (i.e., no user_id rows yet, first time
-    # gathering data for a user), query_objs has one None value
+    # gathering data for a user), both columns have None value
     row = result.one()
 
-    # DEBUG
-    print(row.max_date)
-    print(row.id)
-
     dt_format = '%Y-%m-%d %H:%M:%S.%f'
-    largest_dt = datetime.strptime(row.max_date, dt_format)
+    largest_dt = (datetime.strptime(row.max_date, dt_format) 
+                  if row.max_date != None 
+                  else None) # Sets to None if the query was empty
     current_dt = usage.session_end  
 
     if largest_dt != None and current_dt - largest_dt <= timedelta(seconds=END_SESSION_SECONDS):
-
-        # TODO: This works, but figure out why the server is throwing an exception
+        # Update previous usage row from current session to reflect new end time
         stmt = (update(models.Usage)
              .values({"session_end": current_dt})
              .where(models.Usage.id == row.id))
         db.execute(stmt)
         db.commit()
-        
-        # db.refresh(row)
-        print('done')
 
-        return row
+        # Obtain the usage row that we just updated
+        db_usage = db.query(models.Usage).filter(models.Usage.id == row.id).first()
+        db.refresh(db_usage)
+        return db_usage
     else:
         db_usage = models.Usage(user_id = usage.user_id, 
                                 session_begin = usage.session_begin, 
