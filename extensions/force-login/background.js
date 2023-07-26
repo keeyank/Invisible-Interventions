@@ -8,15 +8,11 @@ function clearCache() {
     chrome.browsingData.remove({
         "origins": ["https://www.tiktok.com/"]
     }, {
-        "cacheStorage": true,
-        "cookies": true,
-        "fileSystems": true,
-        "indexedDB": true,
-        "localStorage": true,
-        "serviceWorkers": true,
-        "webSQL": true
+        "cookies": true
     }, callback);
 }
+
+clearCache();
 
 chrome.runtime.onConnect.addListener(function(port) {
     console.assert(port.name === "clear_cache");
