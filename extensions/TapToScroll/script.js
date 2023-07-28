@@ -2,22 +2,19 @@ const urls = [
   "https://www.tiktok.com/",
   "https://www.tiktok.com/foryou",
   "https://www.tiktok.com/following",
-  "",
 ];
 
-let interval = setInterval(() => {
-  let swiperElement = document.getElementsByClassName("swiper");
-  console.log(swiperElement);
+console.log(`script ${window.location.origin + window.location.pathname}`);
 
-  if (swiperElement.length > 0) {
-    console.log("a", swiperElement.length);
-    console.log("a", swiperElement[0]);
-    console.log("a", Object.getOwnPropertyNames(swiperElement[0]));
+if (urls.includes(window.location.origin + window.location.pathname)) {
+  let interval = setInterval(() => {
+    let swiperElement = document.getElementsByClassName("swiper");
+    console.log(swiperElement);
 
-    if (urls.includes(window.location.origin + window.location.pathname)) {
-      console.log(
-        `hello from ${window.location.origin + window.location.pathname}`
-      );
+    if (swiperElement.length > 0) {
+      console.log("a", swiperElement.length);
+      console.log("a", swiperElement[0]);
+      console.log("a", Object.getOwnPropertyNames(swiperElement[0]));
 
       const ButtonGroupElement = document.createElement("div");
       ButtonGroupElement.style.cssText =
@@ -50,8 +47,8 @@ let interval = setInterval(() => {
         swiper.slideNext();
       };
       document.body.insertBefore(ButtonGroupElement, document.body.firstChild);
-    }
 
-    clearInterval(interval);
-  }
-}, 100);
+      clearInterval(interval);
+    }
+  }, 100);
+}
