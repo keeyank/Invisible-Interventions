@@ -1,3 +1,22 @@
+chrome.storage.local.set({ test: "123" }).then(() => {
+  console.log("Value is set");
+});
+
+chrome.storage.local.get().then((result) => {
+  console.log("Value currently is " + JSON.stringify(result));
+
+  if (!result.key) {
+    chrome.runtime.sendMessage({ status: false }, function (response) {
+      console.log("Response: ", response);
+    });
+  }
+});
+
+//
+// MAIN
+//
+
+// Load script.js
 var s = document.createElement("script");
 s.src = chrome.runtime.getURL("script.js");
 s.onload = function () {
@@ -6,6 +25,7 @@ s.onload = function () {
 // see also "Dynamic values in the injected code" section in this answer
 (document.head || document.documentElement).appendChild(s);
 
+// Watch URL and reload
 let previousUrl = "";
 const observer = new MutationObserver(function (mutations) {
   if (location.href !== previousUrl) {

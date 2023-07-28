@@ -34,5 +34,11 @@
   ],
   "host_permissions": [
     "<all_urls>"
+  ],
+  "action": {
+    "title": "Your Browser Action Name"
+  },
+  "permissions": [
+    "storage"
   ]
 }
