@@ -15,3 +15,5 @@ bcrypt
 
 PyJWT
 pyjwt[crypto]
+
+sqlalchemy
