@@ -22,16 +22,6 @@
       ]
     }
   ],
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "script.js"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ],
   "host_permissions": [
     "<all_urls>"
   ]
