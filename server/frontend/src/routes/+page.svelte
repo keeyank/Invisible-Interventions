@@ -87,7 +87,7 @@
 		</div>
 
 		<div class=" my-6">
-			<label for="gender" class="block mb-2 text-sm text-gray-900">Gender </label>
+			<label for="gender" class="block mb-2 text-sm text-gray-900">Gender</label>
 			<div id="gender" class="mt-5">
 				<div class="flex items-center mb-2">
 					<input
@@ -164,6 +164,25 @@
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">East/Southeast Asian</div>
+				</div>
+				<div class="flex items-center mb-2">
+					<input
+						type="checkbox"
+						bind:group={formData.race}
+						value={'I'}
+						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+					/>
+					<div class="ml-2 text-sm font-medium text-gray-700">Indigenous</div>
+				</div>
+
+				<div class="flex items-center mb-2">
+					<input
+						type="checkbox"
+						bind:group={formData.race}
+						value={'L'}
+						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+					/>
+					<div class="ml-2 text-sm font-medium text-gray-700">Latino</div>
 				</div>
 
 				<div class="flex items-center mb-2">
