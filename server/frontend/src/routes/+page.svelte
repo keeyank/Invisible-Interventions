@@ -95,6 +95,7 @@
 						bind:group={formData.gender}
 						value={'M'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Man</div>
 				</div>
@@ -104,6 +105,7 @@
 						bind:group={formData.gender}
 						value={'F'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Woman</div>
 				</div>
@@ -113,6 +115,7 @@
 						bind:group={formData.gender}
 						value={'N'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Non-binary</div>
 				</div>
@@ -122,6 +125,7 @@
 						bind:group={formData.gender}
 						value={'O'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Other</div>
 				</div>
@@ -131,6 +135,7 @@
 						bind:group={formData.gender}
 						value={'NA'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Prefer not to answer</div>
 				</div>
@@ -153,6 +158,7 @@
 						bind:group={formData.race}
 						value={'B'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Black</div>
 				</div>
@@ -162,6 +168,7 @@
 						bind:group={formData.race}
 						value={'EA'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">East/Southeast Asian</div>
 				</div>
@@ -171,6 +178,7 @@
 						bind:group={formData.race}
 						value={'I'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Indigenous</div>
 				</div>
@@ -181,6 +189,7 @@
 						bind:group={formData.race}
 						value={'L'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Latino</div>
 				</div>
@@ -191,6 +200,7 @@
 						bind:group={formData.race}
 						value={'M'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Middle Eastern</div>
 				</div>
@@ -201,6 +211,7 @@
 						bind:group={formData.race}
 						value={'SA'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">South Asian</div>
 				</div>
@@ -211,6 +222,7 @@
 						bind:group={formData.race}
 						value={'W'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">White</div>
 				</div>
@@ -221,6 +233,7 @@
 						bind:group={formData.race}
 						value={'O'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Other</div>
 				</div>
@@ -231,6 +244,7 @@
 						bind:group={formData.race}
 						value={'NA'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Prefer not to say</div>
 				</div>
@@ -252,6 +266,7 @@
 						bind:group={formData.incomeBracket}
 						value={'0'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$0 to $9,999</div>
 				</div>
@@ -261,6 +276,7 @@
 						bind:group={formData.incomeBracket}
 						value={'10'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$10,000 to $24,999</div>
 				</div>
@@ -270,6 +286,7 @@
 						bind:group={formData.incomeBracket}
 						value={'25'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$25,000 to 49,999</div>
 				</div>
@@ -279,6 +296,7 @@
 						bind:group={formData.incomeBracket}
 						value={'50'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$50,000 to 74,999</div>
 				</div>
@@ -288,6 +306,7 @@
 						bind:group={formData.incomeBracket}
 						value={'75'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$75,000 to 99,999</div>
 				</div>
@@ -298,6 +317,7 @@
 						bind:group={formData.incomeBracket}
 						value={'100'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$100,000 to 149,999</div>
 				</div>
@@ -308,6 +328,7 @@
 						bind:group={formData.incomeBracket}
 						value={'150'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">$150,000 and greater</div>
 				</div>
@@ -318,6 +339,7 @@
 						bind:group={formData.incomeBracket}
 						value={'NA'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Prefer not to answer</div>
 				</div>
@@ -338,6 +360,7 @@
 						bind:group={formData.appUsageFrequency}
 						value={'1'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Never</div>
 				</div>
@@ -347,6 +370,7 @@
 						bind:group={formData.appUsageFrequency}
 						value={'2'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Infrequently</div>
 				</div>
@@ -356,6 +380,7 @@
 						bind:group={formData.appUsageFrequency}
 						value={'3'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">A moderate amount</div>
 				</div>
@@ -365,6 +390,7 @@
 						bind:group={formData.appUsageFrequency}
 						value={'4'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Frequently</div>
 				</div>
@@ -385,6 +411,7 @@
 						bind:group={formData.mindlessUsageFrequency}
 						value={'1'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Never</div>
 				</div>
@@ -394,6 +421,7 @@
 						bind:group={formData.mindlessUsageFrequency}
 						value={'2'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Infrequently</div>
 				</div>
@@ -403,6 +431,7 @@
 						bind:group={formData.mindlessUsageFrequency}
 						value={'3'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">A moderate amount</div>
 				</div>
@@ -412,6 +441,7 @@
 						bind:group={formData.mindlessUsageFrequency}
 						value={'4'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Frequently</div>
 				</div>
@@ -451,6 +481,7 @@
 						bind:group={formData.socialMediaHealthImpact}
 						value={'1'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">
 						Social media positively affects my health
@@ -462,6 +493,7 @@
 						bind:group={formData.socialMediaHealthImpact}
 						value={'2'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">
 						Social media has no effect on my health
@@ -473,6 +505,7 @@
 						bind:group={formData.socialMediaHealthImpact}
 						value={'3'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">
 						Social media negatively affects my health
@@ -495,6 +528,7 @@
 						bind:group={formData.addictionStatus}
 						value={true}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">Yes</div>
 				</div>
@@ -504,6 +538,7 @@
 						bind:group={formData.addictionStatus}
 						value={false}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						required
 					/>
 					<div class="ml-2 text-sm font-medium text-gray-700">No</div>
 				</div>
