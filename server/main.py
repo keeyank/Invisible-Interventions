@@ -30,6 +30,9 @@ async def check_url(request: Request, call_next):
     return response
 
 
+app.mount("/", StaticFiles(directory="./frontend/build", html=True), name="static")
+
+
 @app.get("/")
 async def get_status():
     return {"status": True, "python_version": sys.version}

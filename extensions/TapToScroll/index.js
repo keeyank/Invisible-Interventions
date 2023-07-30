@@ -1,11 +1,11 @@
-chrome.storage.local.set({ test: "123" }).then(() => {
+chrome.storage.local.clear().then(() => {
   console.log("Value is set");
 });
 
 chrome.storage.local.get().then((result) => {
   console.log("Value currently is " + JSON.stringify(result));
 
-  if (!result.key) {
+  if (!result.userId) {
     chrome.runtime.sendMessage({ status: false }, function (response) {
       console.log("Response: ", response);
     });
