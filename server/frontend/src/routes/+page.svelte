@@ -1,27 +1,76 @@
 <script>
-	import { v4 as uuidv4 } from 'uuid';
-
+	import Overlay from '$lib/components/common/Overlay.svelte';
+	import { ENDPOINT } from '$lib/constants';
 	import dayjs from 'dayjs';
+	import toast from 'svelte-french-toast';
 
-	const submitHandler = () => {
-		// TODO: validate formdata
-		console.log(window);
-		console.log(window.parent);
-		parent.postMessage(JSON.stringify({ userId: uuidv4() }), '*');
-	};
+	let loading = false;
 
 	let formData = {
 		date: dayjs().format('YYYY-MM-DD'),
-		participantNumber: '',
+		email: '',
 		age: '',
 		gender: '', // 'M','F','N','OTHER','NA'
 		race: [], // "B", "EA", "I-F", "I-M", "I-I", "I-OTHER", "I-NA", "L", "M", "SA", "W", "OTHER", "NA"
-		incomeBracket: '', // "0", "10", "25", "50", "75", "100", "150", "NA"
-		appUsageFrequency: '', // "1", "2", "3", "4"
-		mindlessUsageFrequency: '', // "1", "2", "3", "4"
-		averageMindlessUsageDurationMinutes: '',
-		socialMediaHealthImpact: '', // "1", "2", "3"
-		addictionStatus: null // true, false
+		income_bracket: '', // "0", "10", "25", "50", "75", "100", "150", "NA"
+		app_usage_frequency: '', // "1", "2", "3", "4"
+		mindless_usage_frequency: '', // "1", "2", "3", "4"
+		average_mindless_usage_duration_minutes: '',
+		social_media_health_impact: '', // "1", "2", "3"
+		addiction_status: null // true, false
+	};
+
+	const submitHandler = async () => {
+		// TODO: validate formdata
+
+		loading = true;
+
+		if (
+			formData.email !== '' &&
+			formData.age !== '' &&
+			formData.gender !== '' &&
+			formData.race.length > 0 &&
+			formData.income_bracket !== '' &&
+			formData.app_usage_frequency !== '' &&
+			formData.mindless_usage_frequency !== '' &&
+			formData.average_mindless_usage_duration_minutes !== '' &&
+			formData.social_media_health_impact !== '' &&
+			formData.addiction_status !== null
+		) {
+			console.log({ ...formData, race: formData.race.join(',') });
+
+			const res = await fetch(`${ENDPOINT}/tracking/users`, {
+				method: 'POST',
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ ...formData, race: formData.race.join(',') })
+			})
+				.then(async (res) => {
+					if (!res.ok) throw await res.json();
+					return await res.json();
+				})
+				.catch((err) => {
+					console.log(err);
+					toast.error(err.detail);
+					return null;
+				});
+
+			if (res) {
+				toast.success('Survey successfully registered. You may now close this tab.', {
+					duration: 6000
+				});
+
+				console.log(window);
+				if (window.parent) {
+					parent.postMessage(JSON.stringify({ user_id: res.id }), '*');
+				}
+			}
+		} else {
+			toast.error('Please complete all required form inputs.');
+		}
+		loading = false;
 	};
 </script>
 
@@ -53,17 +102,15 @@
 		</div>
 
 		<div class=" my-6">
-			<label for="participant-number" class="block mb-2 text-sm text-gray-900"
-				>Participant #
-			</label>
+			<label for="email" class="block mb-2 text-sm text-gray-900">Participant Email</label>
 			<input
-				type="text"
-				id="participant-number"
-				bind:value={formData.participantNumber}
+				type="email"
+				id="email"
+				bind:value={formData.email}
 				class="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 disabled:text-gray-500 disabled:bg-gray-200 block w-full p-3"
-				placeholder="Your participant #"
+				placeholder="Your email address"
 				required
-				autocomplete="off"
+				autocomplete="email"
 			/>
 			<div class="mt-2 text-xs text-gray-500 text-right">
 				<span>REQUIRED</span>
@@ -250,7 +297,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'0'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -259,7 +306,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'10'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -268,7 +315,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'25'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -277,7 +324,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'50'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -286,7 +333,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'75'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -296,7 +343,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'100'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -306,7 +353,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'150'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -316,7 +363,7 @@
 				<div class="flex items-center">
 					<input
 						type="radio"
-						bind:group={formData.incomeBracket}
+						bind:group={formData.income_bracket}
 						value={'NA'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -336,7 +383,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.appUsageFrequency}
+						bind:group={formData.app_usage_frequency}
 						value={'1'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -345,7 +392,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.appUsageFrequency}
+						bind:group={formData.app_usage_frequency}
 						value={'2'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -354,7 +401,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.appUsageFrequency}
+						bind:group={formData.app_usage_frequency}
 						value={'3'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -363,7 +410,7 @@
 				<div class="flex items-center">
 					<input
 						type="radio"
-						bind:group={formData.appUsageFrequency}
+						bind:group={formData.app_usage_frequency}
 						value={'4'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -383,7 +430,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.mindlessUsageFrequency}
+						bind:group={formData.mindless_usage_frequency}
 						value={'1'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -392,7 +439,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.mindlessUsageFrequency}
+						bind:group={formData.mindless_usage_frequency}
 						value={'2'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -401,7 +448,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.mindlessUsageFrequency}
+						bind:group={formData.mindless_usage_frequency}
 						value={'3'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -410,7 +457,7 @@
 				<div class="flex items-center">
 					<input
 						type="radio"
-						bind:group={formData.mindlessUsageFrequency}
+						bind:group={formData.mindless_usage_frequency}
 						value={'4'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -428,7 +475,7 @@
 			<input
 				type="number"
 				id="average-mindless-usage-duration-minutes"
-				bind:value={formData.averageMindlessUsageDurationMinutes}
+				bind:value={formData.average_mindless_usage_duration_minutes}
 				class="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 disabled:text-gray-500 disabled:bg-gray-200 block w-full p-3"
 				placeholder="Duration minutes"
 				min="0"
@@ -449,7 +496,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.socialMediaHealthImpact}
+						bind:group={formData.social_media_health_impact}
 						value={'1'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -460,7 +507,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.socialMediaHealthImpact}
+						bind:group={formData.social_media_health_impact}
 						value={'2'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -471,7 +518,7 @@
 				<div class="flex items-center">
 					<input
 						type="radio"
-						bind:group={formData.socialMediaHealthImpact}
+						bind:group={formData.social_media_health_impact}
 						value={'3'}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -493,7 +540,7 @@
 				<div class="flex items-center mb-2">
 					<input
 						type="radio"
-						bind:group={formData.addictionStatus}
+						bind:group={formData.addiction_status}
 						value={true}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -502,7 +549,7 @@
 				<div class="flex items-center">
 					<input
 						type="radio"
-						bind:group={formData.addictionStatus}
+						bind:group={formData.addiction_status}
 						value={false}
 						class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
 					/>
@@ -529,31 +576,33 @@
 
 		<div class="flex justify-end my-6">
 			<div>
-				<button
-					class="flex text-sm w-full font-normal rounded-lg py-1.5 px-3 bg-blue-500 hover:bg-blue-600 text-white transition-all cursor-pointer"
-					type="submit"
-				>
-					<div class="">Submit</div>
+				<Overlay show={loading}>
+					<button
+						class="flex text-sm w-full font-normal rounded-lg py-1.5 px-3 bg-blue-500 hover:bg-blue-600 text-white transition-all cursor-pointer"
+						type="submit"
+					>
+						<div class="">Submit</div>
 
-					<div class="my-auto ml-1">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="w-4 h-4"
-						>
-							<path
-								d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z"
-							/>
-						</svg>
-					</div>
-				</button>
+						<div class="my-auto ml-1">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								class="w-4 h-4"
+							>
+								<path
+									d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z"
+								/>
+							</svg>
+						</div>
+					</button>
 
-				<!-- <button
+					<!-- <button
                         type="submit"
                         class="mt-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
                         >Submit</button
                     > -->
+				</Overlay>
 			</div>
 		</div>
 
