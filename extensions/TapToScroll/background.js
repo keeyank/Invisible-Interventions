@@ -12,9 +12,9 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 chrome.action.onClicked.addListener(() => {});
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-  if (message.status == false) {
+  console.log(message, sender);
+  if (message.action == "survey") {
     chrome.tabs.create({ url: chrome.runtime.getURL("pages/index.html") });
+    sendResponse("Gotcha!");
   }
-
-  sendResponse("Gotcha!");
 });
