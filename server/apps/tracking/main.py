@@ -43,7 +43,7 @@ async def get_status():
     return {"status": True}
 
 
-@app.get("/users/", response_model=list[schemas.User])
+@app.get("/users", response_model=list[schemas.User])
 def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
@@ -59,7 +59,7 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     return db_user
 
 
-@app.post("/users/", response_model=schemas.User)
+@app.post("/users", response_model=schemas.User)
 def create_user(user: schemas.UserWithSurveyCreate, db: Session = Depends(get_db)):
     db_user = crud.get_user_by_email(db, email=user.email)
     if db_user:
@@ -68,7 +68,7 @@ def create_user(user: schemas.UserWithSurveyCreate, db: Session = Depends(get_db
     return crud.create_user_and_survey_response(db=db, user=user)
 
 
-@app.post("/usage/", response_model=schemas.Usage)
+@app.post("/usage", response_model=schemas.Usage)
 def session_update(user_id: int, db: Session = Depends(get_db)):
     db_user = crud.get_user(db, user_id=user_id)
     if not db_user:
