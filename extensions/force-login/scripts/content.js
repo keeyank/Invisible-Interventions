@@ -26,17 +26,21 @@ window.addEventListener("focus", (event) => {
     console.log('Setting interval' + interval_id);
     request();
     interval_id = setInterval(request, 5000);
-})
+});
 
 window.addEventListener("blur", (event) => {
     console.log('Clearing interval' + interval_id);
     clearInterval(interval_id);
-})
-
-
-var port = chrome.runtime.connect({name: "clear_cache"});
-setTimeout(function () {port.postMessage({clear_cache:true});}, 3000);
-
-port.onMessage.addListener(function(msg) {
-    console.log(msg.message);
 });
+
+// TODO: Only have the reload occur when already logged in
+window.addEventListener("blur", (event) => {
+    location.reload()
+});
+
+// var port = chrome.runtime.connect({name: "clear_cache"});
+// setTimeout(function () {port.postMessage({clear_cache:true});}, 3000);
+
+// port.onMessage.addListener(function(msg) {
+//     console.log(msg.message);
+// });
