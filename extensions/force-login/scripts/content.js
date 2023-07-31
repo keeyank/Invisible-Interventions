@@ -22,6 +22,8 @@ function request() {
 request();
 let interval_id = setInterval(request, 5000);
 
+var port = chrome.runtime.connect({name: "check_cookies"});
+
 window.addEventListener("focus", (event) => {
     console.log('Setting interval' + interval_id);
     request();
@@ -33,26 +35,27 @@ window.addEventListener("blur", (event) => {
     clearInterval(interval_id);
 });
 
-// TODO: Only have the reload occur when already logged in
+// On blur, if user is logged in, reload
+// Requires obtaining cookies for Tik Tok from service worker
+// We need this check to fix a bug where users cannot log in via 3rd party
 window.addEventListener("blur", (event) => {
-    // TODO: This doesn't work, update it so the cookies are done in the background.js
-    // and make it so the await syntax is correct. And you can delete the anonymous function
-    // as it is just for debugging. 
-    // I actually almostn guarantee this will not work. It is likely that the cookies will
-    // have been populated at this point. We need to see what cookie in particular we need
-    // to check for. We can log the cookies to the console to see what cookies there will
-    // be at that point, and what cookies we need to check for.
-    cookies = await chrome.cookies.getAll({ domain: 'tiktok.com' }, function(cookies) {
-        console.log(cookies);
-    });
-    if (cookies.length !== 0) {
-        location.reload()
-    }
+    // Check cookies using service worker (background.js)
+    port.postMessage({check_cookies: true});
 });
 
-// var port = chrome.runtime.connect({name: "clear_cache"});
-// setTimeout(function () {port.postMessage({clear_cache:true});}, 3000);
-
-// port.onMessage.addListener(function(msg) {
-//     console.log(msg.message);
-// });
+port.onMessage.addListener(function(msg) {
+    cookies = msg.message;
+    
+    // Check if the cookies involve login info (username + password)
+    // If so, reload on blur. Otherwise, do not reload on blur,
+    // since the login info is not saved so there is no need
+    
+    // TODO: Maybe to make this safer, we should do more checks here 
+    // (not sure if this will work universally)
+    // If we have some or statements involving other cookie names, we
+    // will probably cover most cases. Check the oneNote to see all cookies
+    // that exist when user logged in vs not logged in. 
+    if (cookies.find(cookie => cookie.name == 'uid_tt')) {
+        location.reload();
+    }
+});
