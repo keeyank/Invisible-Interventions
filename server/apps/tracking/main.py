@@ -69,13 +69,15 @@ def create_user(user: schemas.UserWithSurveyCreate, db: Session = Depends(get_db
 
 
 @app.post("/usage", response_model=schemas.Usage)
-def session_update(user_id: int, db: Session = Depends(get_db)):
-    db_user = crud.get_user(db, user_id=user_id)
+def session_update(form_data: schemas.UsageForm, db: Session = Depends(get_db)):
+    db_user = crud.get_user(db, user_id=form_data.user_id)
     if not db_user:
         raise HTTPException(status_code=400, detail="User ID not found")
 
     usage = schemas.UsageCreate(
-        user_id=user_id, session_begin=datetime.now(), session_end=datetime.now()
+        user_id=form_data.user_id,
+        session_begin=datetime.now(),
+        session_end=datetime.now(),
     )
 
     return crud.session_update(db=db, usage=usage)

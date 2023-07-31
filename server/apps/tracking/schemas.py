@@ -28,6 +28,10 @@ class Usage(UsageBase):
         orm_mode = True
 
 
+class UsageForm(BaseModel):
+    user_id: int
+
+
 #####################
 #
 # SurveyResponse
