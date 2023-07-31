@@ -1,7 +1,3 @@
-// chrome.storage.local.clear().then(() => {
-//   console.log("Value is set");
-// });
-
 chrome.storage.local.get().then((result) => {
   console.log("Stored: " + JSON.stringify(result));
 
@@ -24,6 +20,40 @@ chrome.storage.local.get().then((result) => {
     //
     // MAIN
     //
+
+    // User Tracking
+    setInterval(async () => {
+      if (!document.hidden) {
+        const res = await fetch(
+          `https://interventions.sfu.jryng.com/tracking/usage`,
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ user_id: result.user_id }),
+          }
+        )
+          .then(async (res) => {
+            if (!res.ok) throw await res.json();
+            return await res.json();
+          })
+          .catch((err) => {
+            console.log("tracking", err);
+
+            if (err.detail === "User ID not found") {
+              chrome.storage.local.clear().then(() => {
+                console.log("Value is set");
+              });
+              window.location.reload();
+            }
+
+            return null;
+          });
+        console.log("tracking", res);
+      }
+    }, 5000);
 
     // Load script.js
     var s = document.createElement("script");
