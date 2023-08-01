@@ -7,7 +7,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 print(ROOT_DIR)
 
 
-SQLALCHEMY_DATABASE_URL = f"sqlite:///{ROOT_DIR}/../../sql_app.db"
+SQLALCHEMY_DATABASE_URL = f"sqlite:///{ROOT_DIR}/sql_app.db"
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
 
 engine = create_engine(
