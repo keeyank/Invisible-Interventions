@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Tap to Scroll",
-  "description": "Disables scrolling and only allows users to navigate between posts by tapping",
+  "name": "Gradual Grayscale",
+  "description": "With every touch, it gradually transforms your screen to grayscale",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
@@ -22,10 +22,12 @@
       ]
     }
   ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "web_accessible_resources": [
     {
       "resources": [
-        "script.js",
         "pages/js/index.js"
       ],
       "matches": [
@@ -33,12 +35,6 @@
       ]
     }
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
-  "action": {
-    "title": "Your Browser Action Name"
-  },
   "permissions": [
     "storage"
   ]

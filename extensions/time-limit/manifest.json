@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Force Login",
-  "description": "Force Login for Social Media Websites",
+  "name": "Time Limit",
+  "description": "Take Control of your Screen Time",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
@@ -9,9 +9,9 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  "host_permissions": [
-    "*://*.tiktok.com/*"
-  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "js": [
@@ -19,26 +19,29 @@
       ],
       "matches": [
         "https://www.tiktok.com/*"
+      ],
+      "css": [
+        "css/styles.css"
       ]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": [
+        "html/*",
         "pages/js/index.js"
       ],
       "matches": [
+        "https://www.tiktok.com/*",
         "<all_urls>"
       ]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "permissions": [
-    "browsingData",
-    "tabs",
-    "cookies",
-    "storage"
+    "storage",
+    "tabs"
   ]
 }

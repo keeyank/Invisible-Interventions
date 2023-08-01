@@ -9,8 +9,6 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   }
 });
 
-chrome.action.onClicked.addListener(() => {});
-
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   console.log(message, sender);
   if (message.action == "survey") {

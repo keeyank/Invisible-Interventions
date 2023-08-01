@@ -51,6 +51,7 @@ def create_user_and_survey_response(db: Session, user: schemas.UserWithSurveyCre
     db.add(db_survey_response)
     db.commit()
     db.refresh(db_survey_response)
+    db.refresh(db_user)
 
     return db_user
 
@@ -97,6 +98,7 @@ def session_update(db: Session, usage: schemas.UsageCreate):
     else:
         db_usage = models.Usage(
             user_id=usage.user_id,
+            extension_id=usage.extension_id,
             session_begin=usage.session_begin,
             session_end=usage.session_end,
         )

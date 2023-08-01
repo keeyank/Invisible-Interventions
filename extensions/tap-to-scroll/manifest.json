@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Force Login",
-  "description": "Force Login for Social Media Websites",
+  "name": "Tap to Scroll",
+  "description": "Disables scrolling and only allows users to navigate between posts by tapping",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
@@ -9,22 +9,23 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  "host_permissions": [
-    "*://*.tiktok.com/*"
-  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
-      "js": [
-        "scripts/content.js"
-      ],
       "matches": [
         "https://www.tiktok.com/*"
+      ],
+      "js": [
+        "index.js"
       ]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": [
+        "script.js",
         "pages/js/index.js"
       ],
       "matches": [
@@ -32,13 +33,10 @@
       ]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "permissions": [
-    "browsingData",
-    "tabs",
-    "cookies",
     "storage"
   ]
 }
