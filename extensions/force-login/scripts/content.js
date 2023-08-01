@@ -23,8 +23,6 @@ function request() {
 request();
 let interval_id = setInterval(request, 5000);
 
-var port = chrome.runtime.connect({name: "check_cookies"});
-
 window.addEventListener("focus", (event) => {
     console.log('Setting interval');
     request();
