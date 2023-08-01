@@ -29,7 +29,6 @@
     {
       "resources": [
         "html/*",
-        "script.js",
         "pages/js/index.js"
       ],
       "matches": [

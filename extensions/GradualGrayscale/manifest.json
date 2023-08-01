@@ -28,7 +28,6 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "script.js",
         "pages/js/index.js"
       ],
       "matches": [

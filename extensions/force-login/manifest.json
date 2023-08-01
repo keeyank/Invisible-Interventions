@@ -14,12 +14,31 @@
   ],
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
-      "matches": ["https://www.tiktok.com/*"]
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://www.tiktok.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pages/js/index.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ],
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["browsingData", "tabs", "cookies"]
+  "permissions": [
+    "browsingData",
+    "tabs",
+    "cookies",
+    "storage"
+  ]
 }
