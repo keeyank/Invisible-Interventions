@@ -32,7 +32,10 @@ chrome.storage.local.get().then((result) => {
               Accept: "application/json",
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ user_id: result.user_id }),
+            body: JSON.stringify({
+              user_id: result.user_id,
+              extension_id: "tap-to-scroll",
+            }),
           }
         )
           .then(async (res) => {
