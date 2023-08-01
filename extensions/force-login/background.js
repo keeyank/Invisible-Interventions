@@ -1,5 +1,5 @@
 // Clear cache specifically for Tik Tok
-let minutesPerDataClear = 1;
+let minutesPerDataClear = 3;
 
 function clearCache() {
     var callback = function () {
