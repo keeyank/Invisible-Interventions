@@ -12,6 +12,7 @@ from typing import List, Optional
 
 class UsageBase(BaseModel):
     user_id: int
+    extension_id: str
     session_begin: datetime
     session_end: datetime
     pass
@@ -30,6 +31,7 @@ class Usage(UsageBase):
 
 class UsageForm(BaseModel):
     user_id: int
+    extension_id: str
 
 
 #####################

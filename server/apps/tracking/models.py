@@ -21,6 +21,7 @@ class Usage(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
+    extension_id = Column(String)
     session_begin = Column(DateTime)
     session_end = Column(DateTime)
 

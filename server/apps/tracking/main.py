@@ -76,6 +76,7 @@ def session_update(form_data: schemas.UsageForm, db: Session = Depends(get_db)):
 
     usage = schemas.UsageCreate(
         user_id=form_data.user_id,
+        extension_id=form_data.extension_id,
         session_begin=datetime.now(),
         session_end=datetime.now(),
     )
