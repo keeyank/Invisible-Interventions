@@ -12,14 +12,14 @@
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
-      "matches": ["https://www.instagram.com/*"],
+      "matches": ["https://www.tiktok.com/*"],
       "css" : ["css/styles.css"]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": [ "html/*" ],
-      "matches": [ "https://www.instagram.com/*" ]
+      "matches": [ "https://www.tiktok.com/*" ]
     }
   ],
   "permissions": [
