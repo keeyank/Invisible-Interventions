@@ -18,22 +18,20 @@ if (urls.includes(window.location.origin + window.location.pathname)) {
 
       const ButtonGroupElement = document.createElement("div");
       ButtonGroupElement.style.cssText =
-        "position:fixed;width:100vw;height:50px;bottom:50px;z-index:999999;background:black;display: flex;justify-content: center; align-items: center;text-align: center; border: 1px gray; border-style: solid none;";
+        "width:100vw;height:50px;z-index:999999;background:black;display: flex;justify-content: center; align-items: center;text-align: center; border: 1px gray; border-style: solid none;";
 
       // Adds a button above the existing buttons to enable tap-to-scroll functionality.
       // When clicked, the "taptoscroll" function is invoked.
       const PreviousButtonElement = document.createElement("div");
       PreviousButtonElement.style.cssText =
-        "width:50vw; height: 100%;background:rgb(250, 250, 250); color: black; display: flex;justify-content: center; align-items: center;text-align: center; border-right: solid 0.5px gray;";
-      PreviousButtonElement.innerHTML += "Previous";
+        "position:fixed; top:50px; z-index:1000; width:calc(100vw - 50px); height: 40%;background:rgb(250, 250, 250, 0); color: black; display: flex;justify-content: center; align-items: center;text-align: center;";
 
       const NextButtonElement = document.createElement("div");
       NextButtonElement.style.cssText =
-        "width:50vw; height: 100%;background:rgb(250, 250, 250);color: black;display: flex;justify-content: center; align-items: center;text-align: center; border-left: solid 0.5px gray;";
-      NextButtonElement.innerHTML += "Next";
+        "position:fixed; bottom:50px; z-index:1000; width:calc(100vw - 50px); height: 40%;background:rgb(250, 250, 250, 0);color: black;display: flex;justify-content: center; align-items: center;text-align: center;";
 
-      ButtonGroupElement.appendChild(PreviousButtonElement);
-      ButtonGroupElement.appendChild(NextButtonElement);
+      // ButtonGroupElement.appendChild(PreviousButtonElement);
+      // ButtonGroupElement.appendChild(NextButtonElement);
 
       console.log(swiperElement);
 
@@ -46,7 +44,13 @@ if (urls.includes(window.location.origin + window.location.pathname)) {
       NextButtonElement.onclick = () => {
         swiper.slideNext();
       };
-      document.body.insertBefore(ButtonGroupElement, document.body.firstChild);
+      // document.body.insertBefore(ButtonGroupElement, document.body.firstChild);
+      document.body.insertBefore(
+        PreviousButtonElement,
+        document.body.firstChild
+      );
+
+      document.body.insertBefore(NextButtonElement, document.body.firstChild);
 
       clearInterval(interval);
     }
