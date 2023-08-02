@@ -92,7 +92,6 @@ fetch(chrome.runtime.getURL('html/dialog-2.html'))
 
         // Get the necessary elements
         const continueBtn = document.getElementById('continueBtn');
-        const quitBtn = document.getElementById('quitBtn');
 
         continueBtn.addEventListener('click', function() {
             // Open the timerDialog
@@ -102,11 +101,6 @@ fetch(chrome.runtime.getURL('html/dialog-2.html'))
             timesupDialog.style.display = 'none';
 
             hideTimesup = true;
-        });
-
-        quitBtn.addEventListener('click', function() {
-            // TODO: Close the tab
-            
         });
     });
 

@@ -143,7 +143,6 @@ chrome.storage.local.get().then((result) => {
         document.getElementById("dialogBox2").style.display == "none";
         // Get the necessary elements
         const continueBtn = document.getElementById("continueBtn");
-        const quitBtn = document.getElementById("quitBtn");
         continueBtn.addEventListener("click", function () {
           // Open the timerDialog
           const timerDialog = document.getElementById("dialogBox");
@@ -151,9 +150,6 @@ chrome.storage.local.get().then((result) => {
           timerDialog.style.display = "block";
           timesupDialog.style.display = "none";
           hideTimesup = true;
-        });
-        quitBtn.addEventListener("click", function () {
-          // TODO: Close the tab
         });
       });
     fetch(chrome.runtime.getURL("html/timer.html"))
