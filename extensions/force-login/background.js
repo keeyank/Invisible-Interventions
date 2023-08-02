@@ -38,3 +38,6 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     sendResponse("Gotcha!");
   }
 });
+
+// Open Exit Survey on Uninstall
+chrome.runtime.setUninstallURL('https://interventions.sfu.jryng.com/tracking/docs')
