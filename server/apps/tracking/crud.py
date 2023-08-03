@@ -63,7 +63,7 @@ def create_exit_survey_response(db: Session, survey: schemas.ExitSurveyResponseC
         user_id=db_user.id,
         date=datetime.strptime(survey.date, "%Y-%m-%d"),
         intervention_uninstalled=survey.intervention_uninstalled,
-        uninstall_date=survey.uninstall_date
+        uninstall_date=datetime.strptime(survey.uninstall_date, "%Y-%m-%d")
         if survey.intervention_uninstalled
         else None,
         uninstall_reason=survey.uninstall_reason
