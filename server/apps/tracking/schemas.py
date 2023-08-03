@@ -93,6 +93,7 @@ class ExitSurveyResponse(ExitSurveyResponseBase):
     date: datetime
     uninstall_date: Optional[datetime]
     id: int
+    user_id: int
 
     class Config:
         orm_mode = True

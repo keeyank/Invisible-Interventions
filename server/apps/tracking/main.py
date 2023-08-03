@@ -103,3 +103,11 @@ def create_exit_survey(
 
         else:
             return crud.create_exit_survey_response(db=db, survey=form_data)
+
+
+@app.get("/survey/exit", response_model=List[schemas.ExitSurveyResponse])
+def get_exit_survey_responses(
+    skip: int = 0, limit: int = 100, db: Session = Depends(get_db)
+):
+    responses = crud.get_exit_survey_responses(db, skip=skip, limit=limit)
+    return responses

@@ -151,3 +151,7 @@ def get_usage(db: Session, skip: int = 0, limit: int = 100):
 
 def get_survey_responses(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.SurveyResponse).offset(skip).limit(limit).all()
+
+
+def get_exit_survey_responses(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.ExitSurveyResponse).offset(skip).limit(limit).all()
