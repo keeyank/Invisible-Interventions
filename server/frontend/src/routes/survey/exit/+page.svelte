@@ -40,7 +40,7 @@
 					formData.uninstall_date !== null &&
 					formData.uninstall_reason !== '')
 			) {
-				const res = await fetch(`${ENDPOINT}/survey/exit`, {
+				const res = await fetch(`${ENDPOINT}/tracking/survey/exit`, {
 					method: 'POST',
 					headers: {
 						Accept: 'application/json',
