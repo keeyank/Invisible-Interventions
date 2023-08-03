@@ -84,7 +84,7 @@ def session_update(form_data: schemas.UsageForm, db: Session = Depends(get_db)):
     return crud.session_update(db=db, usage=usage)
 
 
-@app.post("/survey/exit", response_model=schemas.Usage)
+@app.post("/survey/exit", response_model=schemas.ExitSurveyResponse)
 def create_exit_survey(
     form_data: schemas.ExitSurveyResponseCreate, db: Session = Depends(get_db)
 ):
