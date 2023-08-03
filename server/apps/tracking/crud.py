@@ -84,10 +84,10 @@ def create_exit_survey_response(db: Session, survey: schemas.ExitSurveyResponseC
     return db_exit_survey_response
 
 
-def get_exit_survey_response_by_email(db: Session, email: str):
+def get_exit_survey_response_by_user_id(db: Session, user_id: int):
     return (
         db.query(models.ExitSurveyResponse)
-        .filter(models.ExitSurveyResponse.email == email)
+        .filter(models.ExitSurveyResponse.user_id == user_id)
         .first()
     )
 

@@ -94,8 +94,8 @@ def create_exit_survey(
         raise HTTPException(status_code=400, detail="User ID not found")
 
     if db_user:
-        db_exit_survey_response = crud.get_exit_survey_response_by_email(
-            db=db, email=form_data.email
+        db_exit_survey_response = crud.get_exit_survey_response_by_user_id(
+            db=db, user_id=db_user.id
         )
 
         if db_exit_survey_response:
