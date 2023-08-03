@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C5E85182A7B1DF0000D99CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E85172A7B1DF0000D99CB /* AppDelegate.swift */; };
+		8C5E851A2A7B1DF0000D99CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E85192A7B1DF0000D99CB /* SceneDelegate.swift */; };
+		8C5E851D2A7B1DF0000D99CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E851B2A7B1DF0000D99CB /* LaunchScreen.storyboard */; };
+		8C5E85202A7B1DF0000D99CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E851E2A7B1DF0000D99CB /* Main.storyboard */; };
+		8C5E85292A7B1DF0000D99CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E85282A7B1DF0000D99CB /* AppDelegate.swift */; };
+		8C5E852C2A7B1DF0000D99CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E852A2A7B1DF0000D99CB /* Main.storyboard */; };
+		8C5E85342A7B1DF0000D99CB /* Force Login Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C5E85332A7B1DF0000D99CB /* Force Login Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C5E853E2A7B1DF0000D99CB /* Force Login Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C5E853D2A7B1DF0000D99CB /* Force Login Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C5E85442A7B1DF0000D99CB /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85072A7B1DEB000D99CB /* Main.html */; };
+		8C5E85452A7B1DF0000D99CB /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85072A7B1DEB000D99CB /* Main.html */; };
+		8C5E85462A7B1DF0000D99CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85092A7B1DEB000D99CB /* Icon.png */; };
+		8C5E85472A7B1DF0000D99CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85092A7B1DEB000D99CB /* Icon.png */; };
+		8C5E85482A7B1DF0000D99CB /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E850A2A7B1DEB000D99CB /* Style.css */; };
+		8C5E85492A7B1DF0000D99CB /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E850A2A7B1DEB000D99CB /* Style.css */; };
+		8C5E854A2A7B1DF0000D99CB /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E850B2A7B1DEB000D99CB /* Script.js */; };
+		8C5E854B2A7B1DF0000D99CB /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E850B2A7B1DEB000D99CB /* Script.js */; };
+		8C5E854C2A7B1DF0000D99CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E850C2A7B1DEB000D99CB /* ViewController.swift */; };
+		8C5E854D2A7B1DF0000D99CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E850C2A7B1DEB000D99CB /* ViewController.swift */; };
+		8C5E854E2A7B1DF0000D99CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E850D2A7B1DF0000D99CB /* Assets.xcassets */; };
+		8C5E854F2A7B1DF0000D99CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E850D2A7B1DF0000D99CB /* Assets.xcassets */; };
+		8C5E85502A7B1DF0000D99CB /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E850F2A7B1DF0000D99CB /* SafariWebExtensionHandler.swift */; };
+		8C5E85512A7B1DF0000D99CB /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E850F2A7B1DF0000D99CB /* SafariWebExtensionHandler.swift */; };
+		8C5E85682A7B1DF2000D99CB /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85632A7B1DF2000D99CB /* background.js */; };
+		8C5E85692A7B1DF2000D99CB /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85642A7B1DF2000D99CB /* images */; };
+		8C5E856A2A7B1DF2000D99CB /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85652A7B1DF2000D99CB /* scripts */; };
+		8C5E856B2A7B1DF2000D99CB /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85662A7B1DF2000D99CB /* manifest.json */; };
+		8C5E856C2A7B1DF2000D99CB /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85672A7B1DF2000D99CB /* pages */; };
+		8C5E856D2A7B1DF2000D99CB /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85632A7B1DF2000D99CB /* background.js */; };
+		8C5E856E2A7B1DF2000D99CB /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85642A7B1DF2000D99CB /* images */; };
+		8C5E856F2A7B1DF2000D99CB /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85652A7B1DF2000D99CB /* scripts */; };
+		8C5E85702A7B1DF2000D99CB /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85662A7B1DF2000D99CB /* manifest.json */; };
+		8C5E85712A7B1DF2000D99CB /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E85672A7B1DF2000D99CB /* pages */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C5E85352A7B1DF0000D99CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C5E85012A7B1DEB000D99CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5E85322A7B1DF0000D99CB;
+			remoteInfo = "Force Login Extension (iOS)";
+		};
+		8C5E853F2A7B1DF0000D99CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C5E85012A7B1DEB000D99CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5E853C2A7B1DF0000D99CB;
+			remoteInfo = "Force Login Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C5E85572A7B1DF0000D99CB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C5E85342A7B1DF0000D99CB /* Force Login Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E855E2A7B1DF0000D99CB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C5E853E2A7B1DF0000D99CB /* Force Login Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8C5E85082A7B1DEB000D99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		8C5E85092A7B1DEB000D99CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8C5E850A2A7B1DEB000D99CB /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		8C5E850B2A7B1DEB000D99CB /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		8C5E850C2A7B1DEB000D99CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C5E850D2A7B1DF0000D99CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C5E850F2A7B1DF0000D99CB /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8C5E85142A7B1DF0000D99CB /* Force Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Force Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E85172A7B1DF0000D99CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C5E85192A7B1DF0000D99CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8C5E851C2A7B1DF0000D99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C5E851F2A7B1DF0000D99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C5E85212A7B1DF0000D99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5E85262A7B1DF0000D99CB /* Force Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Force Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E85282A7B1DF0000D99CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C5E852B2A7B1DF0000D99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C5E852D2A7B1DF0000D99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5E852E2A7B1DF0000D99CB /* Force Login.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Force Login.entitlements"; sourceTree = "<group>"; };
+		8C5E85332A7B1DF0000D99CB /* Force Login Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Force Login Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E85382A7B1DF0000D99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5E853D2A7B1DF0000D99CB /* Force Login Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Force Login Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E85422A7B1DF0000D99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5E85432A7B1DF0000D99CB /* Force Login.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Force Login.entitlements"; sourceTree = "<group>"; };
+		8C5E85632A7B1DF2000D99CB /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = "../../../force-login/background.js"; sourceTree = "<group>"; };
+		8C5E85642A7B1DF2000D99CB /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = "../../../force-login/images"; sourceTree = "<group>"; };
+		8C5E85652A7B1DF2000D99CB /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = "../../../force-login/scripts"; sourceTree = "<group>"; };
+		8C5E85662A7B1DF2000D99CB /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = "../../../force-login/manifest.json"; sourceTree = "<group>"; };
+		8C5E85672A7B1DF2000D99CB /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pages; path = "../../../force-login/pages"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C5E85112A7B1DF0000D99CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E85232A7B1DF0000D99CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E85302A7B1DF0000D99CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E853A2A7B1DF0000D99CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C5E85002A7B1DEB000D99CB = {
+			isa = PBXGroup;
+			children = (
+				8C5E85052A7B1DEB000D99CB /* Shared (App) */,
+				8C5E850E2A7B1DF0000D99CB /* Shared (Extension) */,
+				8C5E85162A7B1DF0000D99CB /* iOS (App) */,
+				8C5E85272A7B1DF0000D99CB /* macOS (App) */,
+				8C5E85372A7B1DF0000D99CB /* iOS (Extension) */,
+				8C5E85412A7B1DF0000D99CB /* macOS (Extension) */,
+				8C5E85152A7B1DF0000D99CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C5E85052A7B1DEB000D99CB /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E850C2A7B1DEB000D99CB /* ViewController.swift */,
+				8C5E850D2A7B1DF0000D99CB /* Assets.xcassets */,
+				8C5E85062A7B1DEB000D99CB /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		8C5E85062A7B1DEB000D99CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85072A7B1DEB000D99CB /* Main.html */,
+				8C5E85092A7B1DEB000D99CB /* Icon.png */,
+				8C5E850A2A7B1DEB000D99CB /* Style.css */,
+				8C5E850B2A7B1DEB000D99CB /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C5E850E2A7B1DF0000D99CB /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85622A7B1DF2000D99CB /* Resources */,
+				8C5E850F2A7B1DF0000D99CB /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		8C5E85152A7B1DF0000D99CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85142A7B1DF0000D99CB /* Force Login.app */,
+				8C5E85262A7B1DF0000D99CB /* Force Login.app */,
+				8C5E85332A7B1DF0000D99CB /* Force Login Extension.appex */,
+				8C5E853D2A7B1DF0000D99CB /* Force Login Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C5E85162A7B1DF0000D99CB /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85172A7B1DF0000D99CB /* AppDelegate.swift */,
+				8C5E85192A7B1DF0000D99CB /* SceneDelegate.swift */,
+				8C5E851B2A7B1DF0000D99CB /* LaunchScreen.storyboard */,
+				8C5E851E2A7B1DF0000D99CB /* Main.storyboard */,
+				8C5E85212A7B1DF0000D99CB /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		8C5E85272A7B1DF0000D99CB /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85282A7B1DF0000D99CB /* AppDelegate.swift */,
+				8C5E852A2A7B1DF0000D99CB /* Main.storyboard */,
+				8C5E852D2A7B1DF0000D99CB /* Info.plist */,
+				8C5E852E2A7B1DF0000D99CB /* Force Login.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		8C5E85372A7B1DF0000D99CB /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85382A7B1DF0000D99CB /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8C5E85412A7B1DF0000D99CB /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85422A7B1DF0000D99CB /* Info.plist */,
+				8C5E85432A7B1DF0000D99CB /* Force Login.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8C5E85622A7B1DF2000D99CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E85632A7B1DF2000D99CB /* background.js */,
+				8C5E85642A7B1DF2000D99CB /* images */,
+				8C5E85652A7B1DF2000D99CB /* scripts */,
+				8C5E85662A7B1DF2000D99CB /* manifest.json */,
+				8C5E85672A7B1DF2000D99CB /* pages */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C5E85132A7B1DF0000D99CB /* Force Login (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E85582A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login (iOS)" */;
+			buildPhases = (
+				8C5E85102A7B1DF0000D99CB /* Sources */,
+				8C5E85112A7B1DF0000D99CB /* Frameworks */,
+				8C5E85122A7B1DF0000D99CB /* Resources */,
+				8C5E85572A7B1DF0000D99CB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5E85362A7B1DF0000D99CB /* PBXTargetDependency */,
+			);
+			name = "Force Login (iOS)";
+			productName = "Force Login (iOS)";
+			productReference = 8C5E85142A7B1DF0000D99CB /* Force Login.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C5E85252A7B1DF0000D99CB /* Force Login (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E855F2A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login (macOS)" */;
+			buildPhases = (
+				8C5E85222A7B1DF0000D99CB /* Sources */,
+				8C5E85232A7B1DF0000D99CB /* Frameworks */,
+				8C5E85242A7B1DF0000D99CB /* Resources */,
+				8C5E855E2A7B1DF0000D99CB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5E85402A7B1DF0000D99CB /* PBXTargetDependency */,
+			);
+			name = "Force Login (macOS)";
+			productName = "Force Login (macOS)";
+			productReference = 8C5E85262A7B1DF0000D99CB /* Force Login.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C5E85322A7B1DF0000D99CB /* Force Login Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E85542A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login Extension (iOS)" */;
+			buildPhases = (
+				8C5E852F2A7B1DF0000D99CB /* Sources */,
+				8C5E85302A7B1DF0000D99CB /* Frameworks */,
+				8C5E85312A7B1DF0000D99CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Force Login Extension (iOS)";
+			productName = "Force Login Extension (iOS)";
+			productReference = 8C5E85332A7B1DF0000D99CB /* Force Login Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8C5E853C2A7B1DF0000D99CB /* Force Login Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E855B2A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login Extension (macOS)" */;
+			buildPhases = (
+				8C5E85392A7B1DF0000D99CB /* Sources */,
+				8C5E853A2A7B1DF0000D99CB /* Frameworks */,
+				8C5E853B2A7B1DF0000D99CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Force Login Extension (macOS)";
+			productName = "Force Login Extension (macOS)";
+			productReference = 8C5E853D2A7B1DF0000D99CB /* Force Login Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C5E85012A7B1DEB000D99CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8C5E85132A7B1DF0000D99CB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8C5E85252A7B1DF0000D99CB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8C5E85322A7B1DF0000D99CB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8C5E853C2A7B1DF0000D99CB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8C5E85042A7B1DEB000D99CB /* Build configuration list for PBXProject "Force Login" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C5E85002A7B1DEB000D99CB;
+			productRefGroup = 8C5E85152A7B1DF0000D99CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C5E85132A7B1DF0000D99CB /* Force Login (iOS) */,
+				8C5E85252A7B1DF0000D99CB /* Force Login (macOS) */,
+				8C5E85322A7B1DF0000D99CB /* Force Login Extension (iOS) */,
+				8C5E853C2A7B1DF0000D99CB /* Force Login Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C5E85122A7B1DF0000D99CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E85462A7B1DF0000D99CB /* Icon.png in Resources */,
+				8C5E851D2A7B1DF0000D99CB /* LaunchScreen.storyboard in Resources */,
+				8C5E85442A7B1DF0000D99CB /* Main.html in Resources */,
+				8C5E854A2A7B1DF0000D99CB /* Script.js in Resources */,
+				8C5E854E2A7B1DF0000D99CB /* Assets.xcassets in Resources */,
+				8C5E85202A7B1DF0000D99CB /* Main.storyboard in Resources */,
+				8C5E85482A7B1DF0000D99CB /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E85242A7B1DF0000D99CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E85472A7B1DF0000D99CB /* Icon.png in Resources */,
+				8C5E85492A7B1DF0000D99CB /* Style.css in Resources */,
+				8C5E852C2A7B1DF0000D99CB /* Main.storyboard in Resources */,
+				8C5E854B2A7B1DF0000D99CB /* Script.js in Resources */,
+				8C5E854F2A7B1DF0000D99CB /* Assets.xcassets in Resources */,
+				8C5E85452A7B1DF0000D99CB /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E85312A7B1DF0000D99CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E85702A7B1DF2000D99CB /* manifest.json in Resources */,
+				8C5E85712A7B1DF2000D99CB /* pages in Resources */,
+				8C5E856F2A7B1DF2000D99CB /* scripts in Resources */,
+				8C5E856E2A7B1DF2000D99CB /* images in Resources */,
+				8C5E856D2A7B1DF2000D99CB /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E853B2A7B1DF0000D99CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E856B2A7B1DF2000D99CB /* manifest.json in Resources */,
+				8C5E856C2A7B1DF2000D99CB /* pages in Resources */,
+				8C5E856A2A7B1DF2000D99CB /* scripts in Resources */,
+				8C5E85692A7B1DF2000D99CB /* images in Resources */,
+				8C5E85682A7B1DF2000D99CB /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C5E85102A7B1DF0000D99CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E854C2A7B1DF0000D99CB /* ViewController.swift in Sources */,
+				8C5E85182A7B1DF0000D99CB /* AppDelegate.swift in Sources */,
+				8C5E851A2A7B1DF0000D99CB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E85222A7B1DF0000D99CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E854D2A7B1DF0000D99CB /* ViewController.swift in Sources */,
+				8C5E85292A7B1DF0000D99CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E852F2A7B1DF0000D99CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E85502A7B1DF0000D99CB /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E85392A7B1DF0000D99CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E85512A7B1DF0000D99CB /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C5E85362A7B1DF0000D99CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C5E85322A7B1DF0000D99CB /* Force Login Extension (iOS) */;
+			targetProxy = 8C5E85352A7B1DF0000D99CB /* PBXContainerItemProxy */;
+		};
+		8C5E85402A7B1DF0000D99CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C5E853C2A7B1DF0000D99CB /* Force Login Extension (macOS) */;
+			targetProxy = 8C5E853F2A7B1DF0000D99CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C5E85072A7B1DEB000D99CB /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C5E85082A7B1DEB000D99CB /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		8C5E851B2A7B1DF0000D99CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C5E851C2A7B1DF0000D99CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8C5E851E2A7B1DF0000D99CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C5E851F2A7B1DF0000D99CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C5E852A2A7B1DF0000D99CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C5E852B2A7B1DF0000D99CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C5E85522A7B1DF0000D99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C5E85532A7B1DF0000D99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8C5E85552A7B1DF0000D99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login.Extension";
+				PRODUCT_NAME = "Force Login Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C5E85562A7B1DF0000D99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login.Extension";
+				PRODUCT_NAME = "Force Login Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C5E85592A7B1DF0000D99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login";
+				PRODUCT_NAME = "Force Login";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C5E855A2A7B1DF0000D99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login";
+				PRODUCT_NAME = "Force Login";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C5E855C2A7B1DF0000D99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Force Login.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login.Extension";
+				PRODUCT_NAME = "Force Login Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C5E855D2A7B1DF0000D99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Force Login.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login.Extension";
+				PRODUCT_NAME = "Force Login Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8C5E85602A7B1DF0000D99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Force Login.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login";
+				PRODUCT_NAME = "Force Login";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C5E85612A7B1DF0000D99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Force Login.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Force Login";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Force-Login";
+				PRODUCT_NAME = "Force Login";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C5E85042A7B1DEB000D99CB /* Build configuration list for PBXProject "Force Login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E85522A7B1DF0000D99CB /* Debug */,
+				8C5E85532A7B1DF0000D99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E85542A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E85552A7B1DF0000D99CB /* Debug */,
+				8C5E85562A7B1DF0000D99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E85582A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E85592A7B1DF0000D99CB /* Debug */,
+				8C5E855A2A7B1DF0000D99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E855B2A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E855C2A7B1DF0000D99CB /* Debug */,
+				8C5E855D2A7B1DF0000D99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E855F2A7B1DF0000D99CB /* Build configuration list for PBXNativeTarget "Force Login (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E85602A7B1DF0000D99CB /* Debug */,
+				8C5E85612A7B1DF0000D99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C5E85012A7B1DEB000D99CB /* Project object */;
+}

@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8CB172CC2A7B2842008C39DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172CB2A7B2842008C39DA /* AppDelegate.swift */; };
+		8CB172CE2A7B2842008C39DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172CD2A7B2842008C39DA /* SceneDelegate.swift */; };
+		8CB172D12A7B2842008C39DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172CF2A7B2842008C39DA /* LaunchScreen.storyboard */; };
+		8CB172D42A7B2842008C39DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172D22A7B2842008C39DA /* Main.storyboard */; };
+		8CB172DD2A7B2842008C39DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172DC2A7B2842008C39DA /* AppDelegate.swift */; };
+		8CB172E02A7B2842008C39DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172DE2A7B2842008C39DA /* Main.storyboard */; };
+		8CB172E82A7B2842008C39DA /* Gradual Grayscale Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8CB172E72A7B2842008C39DA /* Gradual Grayscale Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8CB172F22A7B2843008C39DA /* Gradual Grayscale Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8CB172F12A7B2843008C39DA /* Gradual Grayscale Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8CB172F82A7B2843008C39DA /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BB2A7B283D008C39DA /* Main.html */; };
+		8CB172F92A7B2843008C39DA /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BB2A7B283D008C39DA /* Main.html */; };
+		8CB172FA2A7B2843008C39DA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BD2A7B283D008C39DA /* Icon.png */; };
+		8CB172FB2A7B2843008C39DA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BD2A7B283D008C39DA /* Icon.png */; };
+		8CB172FC2A7B2843008C39DA /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BE2A7B283D008C39DA /* Style.css */; };
+		8CB172FD2A7B2843008C39DA /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BE2A7B283D008C39DA /* Style.css */; };
+		8CB172FE2A7B2843008C39DA /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BF2A7B283D008C39DA /* Script.js */; };
+		8CB172FF2A7B2843008C39DA /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172BF2A7B283D008C39DA /* Script.js */; };
+		8CB173002A7B2843008C39DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172C02A7B283D008C39DA /* ViewController.swift */; };
+		8CB173012A7B2843008C39DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172C02A7B283D008C39DA /* ViewController.swift */; };
+		8CB173022A7B2843008C39DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172C12A7B2842008C39DA /* Assets.xcassets */; };
+		8CB173032A7B2843008C39DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB172C12A7B2842008C39DA /* Assets.xcassets */; };
+		8CB173042A7B2843008C39DA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172C32A7B2842008C39DA /* SafariWebExtensionHandler.swift */; };
+		8CB173052A7B2843008C39DA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB172C32A7B2842008C39DA /* SafariWebExtensionHandler.swift */; };
+		8CB1731C2A7B2844008C39DA /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8CB173172A7B2844008C39DA /* background.js */; };
+		8CB1731D2A7B2844008C39DA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8CB173182A7B2844008C39DA /* images */; };
+		8CB1731E2A7B2844008C39DA /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8CB173192A7B2844008C39DA /* index.js */; };
+		8CB1731F2A7B2844008C39DA /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1731A2A7B2844008C39DA /* manifest.json */; };
+		8CB173202A7B2844008C39DA /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1731B2A7B2844008C39DA /* pages */; };
+		8CB173212A7B2844008C39DA /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8CB173172A7B2844008C39DA /* background.js */; };
+		8CB173222A7B2844008C39DA /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8CB173182A7B2844008C39DA /* images */; };
+		8CB173232A7B2844008C39DA /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8CB173192A7B2844008C39DA /* index.js */; };
+		8CB173242A7B2844008C39DA /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1731A2A7B2844008C39DA /* manifest.json */; };
+		8CB173252A7B2844008C39DA /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1731B2A7B2844008C39DA /* pages */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CB172E92A7B2842008C39DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CB172B52A7B283C008C39DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CB172E62A7B2842008C39DA;
+			remoteInfo = "Gradual Grayscale Extension (iOS)";
+		};
+		8CB172F32A7B2843008C39DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CB172B52A7B283C008C39DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CB172F02A7B2842008C39DA;
+			remoteInfo = "Gradual Grayscale Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8CB1730B2A7B2843008C39DA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8CB172E82A7B2842008C39DA /* Gradual Grayscale Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB173122A7B2843008C39DA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8CB172F22A7B2843008C39DA /* Gradual Grayscale Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8CB172BC2A7B283D008C39DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		8CB172BD2A7B283D008C39DA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8CB172BE2A7B283D008C39DA /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		8CB172BF2A7B283D008C39DA /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		8CB172C02A7B283D008C39DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CB172C12A7B2842008C39DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CB172C32A7B2842008C39DA /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8CB172C82A7B2842008C39DA /* Gradual Grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradual Grayscale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB172CB2A7B2842008C39DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CB172CD2A7B2842008C39DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8CB172D02A7B2842008C39DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CB172D32A7B2842008C39DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CB172D52A7B2842008C39DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB172DA2A7B2842008C39DA /* Gradual Grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradual Grayscale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB172DC2A7B2842008C39DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CB172DF2A7B2842008C39DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CB172E12A7B2842008C39DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB172E22A7B2842008C39DA /* Gradual Grayscale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gradual Grayscale.entitlements"; sourceTree = "<group>"; };
+		8CB172E72A7B2842008C39DA /* Gradual Grayscale Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gradual Grayscale Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB172EC2A7B2842008C39DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB172F12A7B2843008C39DA /* Gradual Grayscale Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gradual Grayscale Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB172F62A7B2843008C39DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB172F72A7B2843008C39DA /* Gradual Grayscale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gradual Grayscale.entitlements"; sourceTree = "<group>"; };
+		8CB173172A7B2844008C39DA /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = "../../../gradual-grayscale/background.js"; sourceTree = "<group>"; };
+		8CB173182A7B2844008C39DA /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = "../../../gradual-grayscale/images"; sourceTree = "<group>"; };
+		8CB173192A7B2844008C39DA /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = index.js; path = "../../../gradual-grayscale/index.js"; sourceTree = "<group>"; };
+		8CB1731A2A7B2844008C39DA /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = "../../../gradual-grayscale/manifest.json"; sourceTree = "<group>"; };
+		8CB1731B2A7B2844008C39DA /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pages; path = "../../../gradual-grayscale/pages"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CB172C52A7B2842008C39DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172D72A7B2842008C39DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172E42A7B2842008C39DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172EE2A7B2842008C39DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CB172B42A7B283C008C39DA = {
+			isa = PBXGroup;
+			children = (
+				8CB172B92A7B283D008C39DA /* Shared (App) */,
+				8CB172C22A7B2842008C39DA /* Shared (Extension) */,
+				8CB172CA2A7B2842008C39DA /* iOS (App) */,
+				8CB172DB2A7B2842008C39DA /* macOS (App) */,
+				8CB172EB2A7B2842008C39DA /* iOS (Extension) */,
+				8CB172F52A7B2843008C39DA /* macOS (Extension) */,
+				8CB172C92A7B2842008C39DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8CB172B92A7B283D008C39DA /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172C02A7B283D008C39DA /* ViewController.swift */,
+				8CB172C12A7B2842008C39DA /* Assets.xcassets */,
+				8CB172BA2A7B283D008C39DA /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		8CB172BA2A7B283D008C39DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172BB2A7B283D008C39DA /* Main.html */,
+				8CB172BD2A7B283D008C39DA /* Icon.png */,
+				8CB172BE2A7B283D008C39DA /* Style.css */,
+				8CB172BF2A7B283D008C39DA /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8CB172C22A7B2842008C39DA /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8CB173162A7B2844008C39DA /* Resources */,
+				8CB172C32A7B2842008C39DA /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		8CB172C92A7B2842008C39DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172C82A7B2842008C39DA /* Gradual Grayscale.app */,
+				8CB172DA2A7B2842008C39DA /* Gradual Grayscale.app */,
+				8CB172E72A7B2842008C39DA /* Gradual Grayscale Extension.appex */,
+				8CB172F12A7B2843008C39DA /* Gradual Grayscale Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CB172CA2A7B2842008C39DA /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172CB2A7B2842008C39DA /* AppDelegate.swift */,
+				8CB172CD2A7B2842008C39DA /* SceneDelegate.swift */,
+				8CB172CF2A7B2842008C39DA /* LaunchScreen.storyboard */,
+				8CB172D22A7B2842008C39DA /* Main.storyboard */,
+				8CB172D52A7B2842008C39DA /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		8CB172DB2A7B2842008C39DA /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172DC2A7B2842008C39DA /* AppDelegate.swift */,
+				8CB172DE2A7B2842008C39DA /* Main.storyboard */,
+				8CB172E12A7B2842008C39DA /* Info.plist */,
+				8CB172E22A7B2842008C39DA /* Gradual Grayscale.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		8CB172EB2A7B2842008C39DA /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172EC2A7B2842008C39DA /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8CB172F52A7B2843008C39DA /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8CB172F62A7B2843008C39DA /* Info.plist */,
+				8CB172F72A7B2843008C39DA /* Gradual Grayscale.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8CB173162A7B2844008C39DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CB173172A7B2844008C39DA /* background.js */,
+				8CB173182A7B2844008C39DA /* images */,
+				8CB173192A7B2844008C39DA /* index.js */,
+				8CB1731A2A7B2844008C39DA /* manifest.json */,
+				8CB1731B2A7B2844008C39DA /* pages */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CB172C72A7B2842008C39DA /* Gradual Grayscale (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CB1730C2A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale (iOS)" */;
+			buildPhases = (
+				8CB172C42A7B2842008C39DA /* Sources */,
+				8CB172C52A7B2842008C39DA /* Frameworks */,
+				8CB172C62A7B2842008C39DA /* Resources */,
+				8CB1730B2A7B2843008C39DA /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CB172EA2A7B2842008C39DA /* PBXTargetDependency */,
+			);
+			name = "Gradual Grayscale (iOS)";
+			productName = "Gradual Grayscale (iOS)";
+			productReference = 8CB172C82A7B2842008C39DA /* Gradual Grayscale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CB172D92A7B2842008C39DA /* Gradual Grayscale (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CB173132A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale (macOS)" */;
+			buildPhases = (
+				8CB172D62A7B2842008C39DA /* Sources */,
+				8CB172D72A7B2842008C39DA /* Frameworks */,
+				8CB172D82A7B2842008C39DA /* Resources */,
+				8CB173122A7B2843008C39DA /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CB172F42A7B2843008C39DA /* PBXTargetDependency */,
+			);
+			name = "Gradual Grayscale (macOS)";
+			productName = "Gradual Grayscale (macOS)";
+			productReference = 8CB172DA2A7B2842008C39DA /* Gradual Grayscale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CB172E62A7B2842008C39DA /* Gradual Grayscale Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CB173082A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale Extension (iOS)" */;
+			buildPhases = (
+				8CB172E32A7B2842008C39DA /* Sources */,
+				8CB172E42A7B2842008C39DA /* Frameworks */,
+				8CB172E52A7B2842008C39DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gradual Grayscale Extension (iOS)";
+			productName = "Gradual Grayscale Extension (iOS)";
+			productReference = 8CB172E72A7B2842008C39DA /* Gradual Grayscale Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8CB172F02A7B2842008C39DA /* Gradual Grayscale Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CB1730F2A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale Extension (macOS)" */;
+			buildPhases = (
+				8CB172ED2A7B2842008C39DA /* Sources */,
+				8CB172EE2A7B2842008C39DA /* Frameworks */,
+				8CB172EF2A7B2842008C39DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gradual Grayscale Extension (macOS)";
+			productName = "Gradual Grayscale Extension (macOS)";
+			productReference = 8CB172F12A7B2843008C39DA /* Gradual Grayscale Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CB172B52A7B283C008C39DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8CB172C72A7B2842008C39DA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8CB172D92A7B2842008C39DA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8CB172E62A7B2842008C39DA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8CB172F02A7B2842008C39DA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8CB172B82A7B283C008C39DA /* Build configuration list for PBXProject "Gradual Grayscale" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CB172B42A7B283C008C39DA;
+			productRefGroup = 8CB172C92A7B2842008C39DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CB172C72A7B2842008C39DA /* Gradual Grayscale (iOS) */,
+				8CB172D92A7B2842008C39DA /* Gradual Grayscale (macOS) */,
+				8CB172E62A7B2842008C39DA /* Gradual Grayscale Extension (iOS) */,
+				8CB172F02A7B2842008C39DA /* Gradual Grayscale Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CB172C62A7B2842008C39DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB172FA2A7B2843008C39DA /* Icon.png in Resources */,
+				8CB172D12A7B2842008C39DA /* LaunchScreen.storyboard in Resources */,
+				8CB172F82A7B2843008C39DA /* Main.html in Resources */,
+				8CB172FE2A7B2843008C39DA /* Script.js in Resources */,
+				8CB173022A7B2843008C39DA /* Assets.xcassets in Resources */,
+				8CB172D42A7B2842008C39DA /* Main.storyboard in Resources */,
+				8CB172FC2A7B2843008C39DA /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172D82A7B2842008C39DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB172FB2A7B2843008C39DA /* Icon.png in Resources */,
+				8CB172FD2A7B2843008C39DA /* Style.css in Resources */,
+				8CB172E02A7B2842008C39DA /* Main.storyboard in Resources */,
+				8CB172FF2A7B2843008C39DA /* Script.js in Resources */,
+				8CB173032A7B2843008C39DA /* Assets.xcassets in Resources */,
+				8CB172F92A7B2843008C39DA /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172E52A7B2842008C39DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB173242A7B2844008C39DA /* manifest.json in Resources */,
+				8CB173252A7B2844008C39DA /* pages in Resources */,
+				8CB173232A7B2844008C39DA /* index.js in Resources */,
+				8CB173222A7B2844008C39DA /* images in Resources */,
+				8CB173212A7B2844008C39DA /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172EF2A7B2842008C39DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB1731F2A7B2844008C39DA /* manifest.json in Resources */,
+				8CB173202A7B2844008C39DA /* pages in Resources */,
+				8CB1731E2A7B2844008C39DA /* index.js in Resources */,
+				8CB1731D2A7B2844008C39DA /* images in Resources */,
+				8CB1731C2A7B2844008C39DA /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CB172C42A7B2842008C39DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB173002A7B2843008C39DA /* ViewController.swift in Sources */,
+				8CB172CC2A7B2842008C39DA /* AppDelegate.swift in Sources */,
+				8CB172CE2A7B2842008C39DA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172D62A7B2842008C39DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB173012A7B2843008C39DA /* ViewController.swift in Sources */,
+				8CB172DD2A7B2842008C39DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172E32A7B2842008C39DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB173042A7B2843008C39DA /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB172ED2A7B2842008C39DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB173052A7B2843008C39DA /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CB172EA2A7B2842008C39DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CB172E62A7B2842008C39DA /* Gradual Grayscale Extension (iOS) */;
+			targetProxy = 8CB172E92A7B2842008C39DA /* PBXContainerItemProxy */;
+		};
+		8CB172F42A7B2843008C39DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CB172F02A7B2842008C39DA /* Gradual Grayscale Extension (macOS) */;
+			targetProxy = 8CB172F32A7B2843008C39DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8CB172BB2A7B283D008C39DA /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB172BC2A7B283D008C39DA /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		8CB172CF2A7B2842008C39DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB172D02A7B2842008C39DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8CB172D22A7B2842008C39DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB172D32A7B2842008C39DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8CB172DE2A7B2842008C39DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB172DF2A7B2842008C39DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CB173062A7B2843008C39DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CB173072A7B2843008C39DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8CB173092A7B2843008C39DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale.Extension";
+				PRODUCT_NAME = "Gradual Grayscale Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CB1730A2A7B2843008C39DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale.Extension";
+				PRODUCT_NAME = "Gradual Grayscale Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CB1730D2A7B2843008C39DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale";
+				PRODUCT_NAME = "Gradual Grayscale";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8CB1730E2A7B2843008C39DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale";
+				PRODUCT_NAME = "Gradual Grayscale";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CB173102A7B2843008C39DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Gradual Grayscale.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale.Extension";
+				PRODUCT_NAME = "Gradual Grayscale Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8CB173112A7B2843008C39DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Gradual Grayscale.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale.Extension";
+				PRODUCT_NAME = "Gradual Grayscale Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8CB173142A7B2843008C39DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Gradual Grayscale.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale";
+				PRODUCT_NAME = "Gradual Grayscale";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8CB173152A7B2843008C39DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Gradual Grayscale.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gradual Grayscale";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Gradual-Grayscale";
+				PRODUCT_NAME = "Gradual Grayscale";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CB172B82A7B283C008C39DA /* Build configuration list for PBXProject "Gradual Grayscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB173062A7B2843008C39DA /* Debug */,
+				8CB173072A7B2843008C39DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CB173082A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB173092A7B2843008C39DA /* Debug */,
+				8CB1730A2A7B2843008C39DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CB1730C2A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB1730D2A7B2843008C39DA /* Debug */,
+				8CB1730E2A7B2843008C39DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CB1730F2A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB173102A7B2843008C39DA /* Debug */,
+				8CB173112A7B2843008C39DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CB173132A7B2843008C39DA /* Build configuration list for PBXNativeTarget "Gradual Grayscale (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB173142A7B2843008C39DA /* Debug */,
+				8CB173152A7B2843008C39DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CB172B52A7B283C008C39DA /* Project object */;
+}

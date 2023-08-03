@@ -1,0 +1,951 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C295D712A7B2FEB0025397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D702A7B2FEB0025397A /* AppDelegate.swift */; };
+		8C295D732A7B2FEB0025397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D722A7B2FEB0025397A /* SceneDelegate.swift */; };
+		8C295D762A7B2FEB0025397A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D742A7B2FEB0025397A /* LaunchScreen.storyboard */; };
+		8C295D792A7B2FEB0025397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D772A7B2FEB0025397A /* Main.storyboard */; };
+		8C295D822A7B2FEB0025397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D812A7B2FEB0025397A /* AppDelegate.swift */; };
+		8C295D852A7B2FEB0025397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D832A7B2FEB0025397A /* Main.storyboard */; };
+		8C295D8D2A7B2FEB0025397A /* Tap to Scroll Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C295D8C2A7B2FEB0025397A /* Tap to Scroll Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C295D972A7B2FEB0025397A /* Tap to Scroll Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C295D962A7B2FEB0025397A /* Tap to Scroll Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C295D9D2A7B2FEB0025397A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D602A7B2FE60025397A /* Main.html */; };
+		8C295D9E2A7B2FEB0025397A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D602A7B2FE60025397A /* Main.html */; };
+		8C295D9F2A7B2FEB0025397A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D622A7B2FE60025397A /* Icon.png */; };
+		8C295DA02A7B2FEB0025397A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D622A7B2FE60025397A /* Icon.png */; };
+		8C295DA12A7B2FEB0025397A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D632A7B2FE60025397A /* Style.css */; };
+		8C295DA22A7B2FEB0025397A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D632A7B2FE60025397A /* Style.css */; };
+		8C295DA32A7B2FEB0025397A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D642A7B2FE60025397A /* Script.js */; };
+		8C295DA42A7B2FEB0025397A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D642A7B2FE60025397A /* Script.js */; };
+		8C295DA52A7B2FEB0025397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D652A7B2FE60025397A /* ViewController.swift */; };
+		8C295DA62A7B2FEB0025397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D652A7B2FE60025397A /* ViewController.swift */; };
+		8C295DA72A7B2FEB0025397A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D662A7B2FEB0025397A /* Assets.xcassets */; };
+		8C295DA82A7B2FEB0025397A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C295D662A7B2FEB0025397A /* Assets.xcassets */; };
+		8C295DA92A7B2FEB0025397A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D682A7B2FEB0025397A /* SafariWebExtensionHandler.swift */; };
+		8C295DAA2A7B2FEB0025397A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C295D682A7B2FEB0025397A /* SafariWebExtensionHandler.swift */; };
+		8C295DC22A7B2FEC0025397A /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBC2A7B2FEC0025397A /* background.js */; };
+		8C295DC32A7B2FEC0025397A /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBD2A7B2FEC0025397A /* images */; };
+		8C295DC42A7B2FEC0025397A /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBE2A7B2FEC0025397A /* index.js */; };
+		8C295DC52A7B2FEC0025397A /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBF2A7B2FEC0025397A /* script.js */; };
+		8C295DC62A7B2FEC0025397A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DC02A7B2FEC0025397A /* manifest.json */; };
+		8C295DC72A7B2FEC0025397A /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DC12A7B2FEC0025397A /* pages */; };
+		8C295DC82A7B2FEC0025397A /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBC2A7B2FEC0025397A /* background.js */; };
+		8C295DC92A7B2FEC0025397A /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBD2A7B2FEC0025397A /* images */; };
+		8C295DCA2A7B2FEC0025397A /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBE2A7B2FEC0025397A /* index.js */; };
+		8C295DCB2A7B2FEC0025397A /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DBF2A7B2FEC0025397A /* script.js */; };
+		8C295DCC2A7B2FEC0025397A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DC02A7B2FEC0025397A /* manifest.json */; };
+		8C295DCD2A7B2FEC0025397A /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 8C295DC12A7B2FEC0025397A /* pages */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C295D8E2A7B2FEB0025397A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C295D5A2A7B2FE60025397A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C295D8B2A7B2FEB0025397A;
+			remoteInfo = "Tap to Scroll Extension (iOS)";
+		};
+		8C295D982A7B2FEB0025397A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C295D5A2A7B2FE60025397A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C295D952A7B2FEB0025397A;
+			remoteInfo = "Tap to Scroll Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C295DB02A7B2FEB0025397A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C295D8D2A7B2FEB0025397A /* Tap to Scroll Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295DB72A7B2FEB0025397A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C295D972A7B2FEB0025397A /* Tap to Scroll Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8C295D612A7B2FE60025397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		8C295D622A7B2FE60025397A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8C295D632A7B2FE60025397A /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		8C295D642A7B2FE60025397A /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		8C295D652A7B2FE60025397A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C295D662A7B2FEB0025397A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C295D682A7B2FEB0025397A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8C295D6D2A7B2FEB0025397A /* Tap to Scroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap to Scroll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C295D702A7B2FEB0025397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C295D722A7B2FEB0025397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8C295D752A7B2FEB0025397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C295D782A7B2FEB0025397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C295D7A2A7B2FEB0025397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C295D7F2A7B2FEB0025397A /* Tap to Scroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap to Scroll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C295D812A7B2FEB0025397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C295D842A7B2FEB0025397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C295D862A7B2FEB0025397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C295D872A7B2FEB0025397A /* Tap to Scroll.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tap to Scroll.entitlements"; sourceTree = "<group>"; };
+		8C295D8C2A7B2FEB0025397A /* Tap to Scroll Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tap to Scroll Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C295D912A7B2FEB0025397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C295D962A7B2FEB0025397A /* Tap to Scroll Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tap to Scroll Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C295D9B2A7B2FEB0025397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C295D9C2A7B2FEB0025397A /* Tap to Scroll.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tap to Scroll.entitlements"; sourceTree = "<group>"; };
+		8C295DBC2A7B2FEC0025397A /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = "../../../tap-to-scroll/background.js"; sourceTree = "<group>"; };
+		8C295DBD2A7B2FEC0025397A /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = "../../../tap-to-scroll/images"; sourceTree = "<group>"; };
+		8C295DBE2A7B2FEC0025397A /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = index.js; path = "../../../tap-to-scroll/index.js"; sourceTree = "<group>"; };
+		8C295DBF2A7B2FEC0025397A /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = script.js; path = "../../../tap-to-scroll/script.js"; sourceTree = "<group>"; };
+		8C295DC02A7B2FEC0025397A /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = "../../../tap-to-scroll/manifest.json"; sourceTree = "<group>"; };
+		8C295DC12A7B2FEC0025397A /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pages; path = "../../../tap-to-scroll/pages"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C295D6A2A7B2FEB0025397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D7C2A7B2FEB0025397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D892A7B2FEB0025397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D932A7B2FEB0025397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C295D592A7B2FE60025397A = {
+			isa = PBXGroup;
+			children = (
+				8C295D5E2A7B2FE60025397A /* Shared (App) */,
+				8C295D672A7B2FEB0025397A /* Shared (Extension) */,
+				8C295D6F2A7B2FEB0025397A /* iOS (App) */,
+				8C295D802A7B2FEB0025397A /* macOS (App) */,
+				8C295D902A7B2FEB0025397A /* iOS (Extension) */,
+				8C295D9A2A7B2FEB0025397A /* macOS (Extension) */,
+				8C295D6E2A7B2FEB0025397A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C295D5E2A7B2FE60025397A /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D652A7B2FE60025397A /* ViewController.swift */,
+				8C295D662A7B2FEB0025397A /* Assets.xcassets */,
+				8C295D5F2A7B2FE60025397A /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		8C295D5F2A7B2FE60025397A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D602A7B2FE60025397A /* Main.html */,
+				8C295D622A7B2FE60025397A /* Icon.png */,
+				8C295D632A7B2FE60025397A /* Style.css */,
+				8C295D642A7B2FE60025397A /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C295D672A7B2FEB0025397A /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C295DBB2A7B2FEC0025397A /* Resources */,
+				8C295D682A7B2FEB0025397A /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		8C295D6E2A7B2FEB0025397A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D6D2A7B2FEB0025397A /* Tap to Scroll.app */,
+				8C295D7F2A7B2FEB0025397A /* Tap to Scroll.app */,
+				8C295D8C2A7B2FEB0025397A /* Tap to Scroll Extension.appex */,
+				8C295D962A7B2FEB0025397A /* Tap to Scroll Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C295D6F2A7B2FEB0025397A /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D702A7B2FEB0025397A /* AppDelegate.swift */,
+				8C295D722A7B2FEB0025397A /* SceneDelegate.swift */,
+				8C295D742A7B2FEB0025397A /* LaunchScreen.storyboard */,
+				8C295D772A7B2FEB0025397A /* Main.storyboard */,
+				8C295D7A2A7B2FEB0025397A /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		8C295D802A7B2FEB0025397A /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D812A7B2FEB0025397A /* AppDelegate.swift */,
+				8C295D832A7B2FEB0025397A /* Main.storyboard */,
+				8C295D862A7B2FEB0025397A /* Info.plist */,
+				8C295D872A7B2FEB0025397A /* Tap to Scroll.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		8C295D902A7B2FEB0025397A /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D912A7B2FEB0025397A /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8C295D9A2A7B2FEB0025397A /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C295D9B2A7B2FEB0025397A /* Info.plist */,
+				8C295D9C2A7B2FEB0025397A /* Tap to Scroll.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8C295DBB2A7B2FEC0025397A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C295DBC2A7B2FEC0025397A /* background.js */,
+				8C295DBD2A7B2FEC0025397A /* images */,
+				8C295DBE2A7B2FEC0025397A /* index.js */,
+				8C295DBF2A7B2FEC0025397A /* script.js */,
+				8C295DC02A7B2FEC0025397A /* manifest.json */,
+				8C295DC12A7B2FEC0025397A /* pages */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C295D6C2A7B2FEB0025397A /* Tap to Scroll (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C295DB12A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll (iOS)" */;
+			buildPhases = (
+				8C295D692A7B2FEB0025397A /* Sources */,
+				8C295D6A2A7B2FEB0025397A /* Frameworks */,
+				8C295D6B2A7B2FEB0025397A /* Resources */,
+				8C295DB02A7B2FEB0025397A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C295D8F2A7B2FEB0025397A /* PBXTargetDependency */,
+			);
+			name = "Tap to Scroll (iOS)";
+			productName = "Tap to Scroll (iOS)";
+			productReference = 8C295D6D2A7B2FEB0025397A /* Tap to Scroll.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C295D7E2A7B2FEB0025397A /* Tap to Scroll (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C295DB82A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll (macOS)" */;
+			buildPhases = (
+				8C295D7B2A7B2FEB0025397A /* Sources */,
+				8C295D7C2A7B2FEB0025397A /* Frameworks */,
+				8C295D7D2A7B2FEB0025397A /* Resources */,
+				8C295DB72A7B2FEB0025397A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C295D992A7B2FEB0025397A /* PBXTargetDependency */,
+			);
+			name = "Tap to Scroll (macOS)";
+			productName = "Tap to Scroll (macOS)";
+			productReference = 8C295D7F2A7B2FEB0025397A /* Tap to Scroll.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C295D8B2A7B2FEB0025397A /* Tap to Scroll Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C295DAD2A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll Extension (iOS)" */;
+			buildPhases = (
+				8C295D882A7B2FEB0025397A /* Sources */,
+				8C295D892A7B2FEB0025397A /* Frameworks */,
+				8C295D8A2A7B2FEB0025397A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tap to Scroll Extension (iOS)";
+			productName = "Tap to Scroll Extension (iOS)";
+			productReference = 8C295D8C2A7B2FEB0025397A /* Tap to Scroll Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8C295D952A7B2FEB0025397A /* Tap to Scroll Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C295DB42A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll Extension (macOS)" */;
+			buildPhases = (
+				8C295D922A7B2FEB0025397A /* Sources */,
+				8C295D932A7B2FEB0025397A /* Frameworks */,
+				8C295D942A7B2FEB0025397A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tap to Scroll Extension (macOS)";
+			productName = "Tap to Scroll Extension (macOS)";
+			productReference = 8C295D962A7B2FEB0025397A /* Tap to Scroll Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C295D5A2A7B2FE60025397A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8C295D6C2A7B2FEB0025397A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8C295D7E2A7B2FEB0025397A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8C295D8B2A7B2FEB0025397A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8C295D952A7B2FEB0025397A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8C295D5D2A7B2FE60025397A /* Build configuration list for PBXProject "Tap to Scroll" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C295D592A7B2FE60025397A;
+			productRefGroup = 8C295D6E2A7B2FEB0025397A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C295D6C2A7B2FEB0025397A /* Tap to Scroll (iOS) */,
+				8C295D7E2A7B2FEB0025397A /* Tap to Scroll (macOS) */,
+				8C295D8B2A7B2FEB0025397A /* Tap to Scroll Extension (iOS) */,
+				8C295D952A7B2FEB0025397A /* Tap to Scroll Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C295D6B2A7B2FEB0025397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295D9F2A7B2FEB0025397A /* Icon.png in Resources */,
+				8C295D762A7B2FEB0025397A /* LaunchScreen.storyboard in Resources */,
+				8C295D9D2A7B2FEB0025397A /* Main.html in Resources */,
+				8C295DA32A7B2FEB0025397A /* Script.js in Resources */,
+				8C295DA72A7B2FEB0025397A /* Assets.xcassets in Resources */,
+				8C295D792A7B2FEB0025397A /* Main.storyboard in Resources */,
+				8C295DA12A7B2FEB0025397A /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D7D2A7B2FEB0025397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DA02A7B2FEB0025397A /* Icon.png in Resources */,
+				8C295DA22A7B2FEB0025397A /* Style.css in Resources */,
+				8C295D852A7B2FEB0025397A /* Main.storyboard in Resources */,
+				8C295DA42A7B2FEB0025397A /* Script.js in Resources */,
+				8C295DA82A7B2FEB0025397A /* Assets.xcassets in Resources */,
+				8C295D9E2A7B2FEB0025397A /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D8A2A7B2FEB0025397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DCA2A7B2FEC0025397A /* index.js in Resources */,
+				8C295DCB2A7B2FEC0025397A /* script.js in Resources */,
+				8C295DCC2A7B2FEC0025397A /* manifest.json in Resources */,
+				8C295DCD2A7B2FEC0025397A /* pages in Resources */,
+				8C295DC92A7B2FEC0025397A /* images in Resources */,
+				8C295DC82A7B2FEC0025397A /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D942A7B2FEB0025397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DC42A7B2FEC0025397A /* index.js in Resources */,
+				8C295DC52A7B2FEC0025397A /* script.js in Resources */,
+				8C295DC62A7B2FEC0025397A /* manifest.json in Resources */,
+				8C295DC72A7B2FEC0025397A /* pages in Resources */,
+				8C295DC32A7B2FEC0025397A /* images in Resources */,
+				8C295DC22A7B2FEC0025397A /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C295D692A7B2FEB0025397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DA52A7B2FEB0025397A /* ViewController.swift in Sources */,
+				8C295D712A7B2FEB0025397A /* AppDelegate.swift in Sources */,
+				8C295D732A7B2FEB0025397A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D7B2A7B2FEB0025397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DA62A7B2FEB0025397A /* ViewController.swift in Sources */,
+				8C295D822A7B2FEB0025397A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D882A7B2FEB0025397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DA92A7B2FEB0025397A /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C295D922A7B2FEB0025397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C295DAA2A7B2FEB0025397A /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C295D8F2A7B2FEB0025397A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C295D8B2A7B2FEB0025397A /* Tap to Scroll Extension (iOS) */;
+			targetProxy = 8C295D8E2A7B2FEB0025397A /* PBXContainerItemProxy */;
+		};
+		8C295D992A7B2FEB0025397A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C295D952A7B2FEB0025397A /* Tap to Scroll Extension (macOS) */;
+			targetProxy = 8C295D982A7B2FEB0025397A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C295D602A7B2FE60025397A /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C295D612A7B2FE60025397A /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		8C295D742A7B2FEB0025397A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C295D752A7B2FEB0025397A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8C295D772A7B2FEB0025397A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C295D782A7B2FEB0025397A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C295D832A7B2FEB0025397A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C295D842A7B2FEB0025397A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C295DAB2A7B2FEB0025397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C295DAC2A7B2FEB0025397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8C295DAE2A7B2FEB0025397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll.Extension";
+				PRODUCT_NAME = "Tap to Scroll Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C295DAF2A7B2FEB0025397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll.Extension";
+				PRODUCT_NAME = "Tap to Scroll Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C295DB22A7B2FEB0025397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll";
+				PRODUCT_NAME = "Tap to Scroll";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C295DB32A7B2FEB0025397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll";
+				PRODUCT_NAME = "Tap to Scroll";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C295DB52A7B2FEB0025397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Tap to Scroll.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll.Extension";
+				PRODUCT_NAME = "Tap to Scroll Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C295DB62A7B2FEB0025397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Tap to Scroll.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll.Extension";
+				PRODUCT_NAME = "Tap to Scroll Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8C295DB92A7B2FEB0025397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Tap to Scroll.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll";
+				PRODUCT_NAME = "Tap to Scroll";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C295DBA2A7B2FEB0025397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Tap to Scroll.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tap to Scroll";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Tap-to-Scroll";
+				PRODUCT_NAME = "Tap to Scroll";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C295D5D2A7B2FE60025397A /* Build configuration list for PBXProject "Tap to Scroll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C295DAB2A7B2FEB0025397A /* Debug */,
+				8C295DAC2A7B2FEB0025397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C295DAD2A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C295DAE2A7B2FEB0025397A /* Debug */,
+				8C295DAF2A7B2FEB0025397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C295DB12A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C295DB22A7B2FEB0025397A /* Debug */,
+				8C295DB32A7B2FEB0025397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C295DB42A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C295DB52A7B2FEB0025397A /* Debug */,
+				8C295DB62A7B2FEB0025397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C295DB82A7B2FEB0025397A /* Build configuration list for PBXNativeTarget "Tap to Scroll (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C295DB92A7B2FEB0025397A /* Debug */,
+				8C295DBA2A7B2FEB0025397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C295D5A2A7B2FE60025397A /* Project object */;
+}

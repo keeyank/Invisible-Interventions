@@ -39,5 +39,5 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   }
 });
 
-// Open Exit Survey on Uninstall
+// Open Exit Survey on Uninstall TODO: Use an actual exit-form here
 chrome.runtime.setUninstallURL('https://interventions.sfu.jryng.com/tracking/docs')
