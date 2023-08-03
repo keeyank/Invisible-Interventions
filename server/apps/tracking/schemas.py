@@ -67,6 +67,39 @@ class SurveyResponse(SurveyResponseBase):
 
 #####################
 #
+# ExitSurveyResponse
+#
+#####################
+
+
+class ExitSurveyResponseBase(BaseModel):
+    intervention_uninstalled: bool
+    uninstall_reason: Optional[str]
+    intervention_ux_impact: str
+    mindless_consumption_changes: str
+    intervention_effect: str
+    perception_with_notifications: str
+    habit_awareness: bool
+    additional_comments: str
+
+
+class ExitSurveyResponseCreate(ExitSurveyResponseBase):
+    email: str
+    uninstall_date: Optional[str]
+    date: str
+
+
+class ExitSurveyResponse(ExitSurveyResponseBase):
+    date: datetime
+    uninstall_date: Optional[datetime]
+    id: int
+
+    class Config:
+        orm_mode = True
+
+
+#####################
+#
 # User
 #
 #####################

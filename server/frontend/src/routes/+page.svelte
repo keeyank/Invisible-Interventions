@@ -76,6 +76,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Pre-Experiment Survey | SFU</title>
+</svelte:head>
+
 <div class="mx-4 mb-20">
 	<div class="">
 		<div class="flex justify-center">

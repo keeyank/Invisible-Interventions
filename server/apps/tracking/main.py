@@ -82,3 +82,24 @@ def session_update(form_data: schemas.UsageForm, db: Session = Depends(get_db)):
     )
 
     return crud.session_update(db=db, usage=usage)
+
+
+@app.post("/survey/exit", response_model=schemas.Usage)
+def create_exit_survey(
+    form_data: schemas.ExitSurveyResponseCreate, db: Session = Depends(get_db)
+):
+    db_user = crud.get_user_by_email(db, email=form_data.email)
+
+    if not db_user:
+        raise HTTPException(status_code=400, detail="User ID not found")
+
+    if db_user:
+        db_exit_survey_response = crud.get_exit_survey_response_by_email(
+            db=db, email=form_data.email
+        )
+
+        if db_exit_survey_response:
+            raise HTTPException(status_code=400, detail="Duplicate Response")
+
+        else:
+            return crud.create_exit_survey_response(db=db, survey=form_data)

@@ -45,3 +45,20 @@ class SurveyResponse(Base):
     addiction_status = Column(Boolean)
 
     user = relationship("User", back_populates="survey_response")
+
+
+class ExitSurveyResponse(Base):
+    __tablename__ = "exit_survey_responses"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    date = Column(DateTime)
+    intervention_uninstalled = Column(Boolean)
+    uninstall_date = Column(DateTime)
+    uninstall_reason = Column(String)
+    intervention_ux_impact = Column(String)
+    mindless_consumption_changes = Column(String)
+    intervention_effect = Column(String)
+    perception_with_notifications = Column(String)
+    habit_awareness = Column(Boolean)
+    additional_comments = Column(String)

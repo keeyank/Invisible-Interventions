@@ -56,6 +56,38 @@ def create_user_and_survey_response(db: Session, user: schemas.UserWithSurveyCre
     return db_user
 
 
+def create_exit_survey_response(db: Session, survey: schemas.ExitSurveyResponseCreate):
+    db_user = get_user_by_email(db=db, email=survey.email)
+
+    db_exit_survey_response = models.ExitSurveyResponse(
+        user_id=db_user.id,
+        date=datetime.strptime(survey.date, "%Y-%m-%d"),
+        intervention_uninstalled=survey.intervention_uninstalled,
+        uninstall_date=survey.uninstall_date,
+        uninstall_reason=survey.uninstall_reason,
+        intervention_ux_impact=survey.intervention_ux_impact,
+        mindless_consumption_changes=survey.mindless_consumption_changes,
+        intervention_effect=survey.intervention_effect,
+        perception_with_notifications=survey.perception_with_notifications,
+        habit_awareness=survey.habit_awareness,
+        additional_comments=survey.additional_comments,
+    )
+
+    db.add(db_exit_survey_response)
+    db.commit()
+    db.refresh(db_exit_survey_response)
+
+    return db_exit_survey_response
+
+
+def get_exit_survey_response_by_email(db: Session, email: str):
+    return (
+        db.query(models.ExitSurveyResponse)
+        .filter(models.ExitSurveyResponse.email == email)
+        .first()
+    )
+
+
 # Idea: Find usage row for the same user in the DB that has the latest date
 # If this date is less than N seconds in the past, update this row with the new
 # date as end date. Otherwise, create a new row using the Usage object
