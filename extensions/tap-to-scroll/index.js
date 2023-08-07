@@ -1,4 +1,9 @@
-const tracking = (extension_id = "tap-to-scroll") => {
+// chrome.storage.local.clear().then(() => {
+//   console.log("Value is set");
+// });
+
+const tracking = (user_id, extension_id) => {
+  console.log(user_id, extension_id);
   // User Tracking
   setInterval(async () => {
     if (!document.hidden) {
@@ -11,7 +16,7 @@ const tracking = (extension_id = "tap-to-scroll") => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            user_id: result.user_id,
+            user_id: user_id,
             extension_id: extension_id,
           }),
         }
@@ -39,6 +44,7 @@ const tracking = (extension_id = "tap-to-scroll") => {
 
 chrome.storage.local.get().then((result) => {
   console.log("Stored: " + JSON.stringify(result));
+  console.log(Math.round(Date.now() / 1000));
 
   if (!result.installation_timestamp) {
     // Save the timestamp when the user first installs the extension
@@ -74,12 +80,13 @@ chrome.storage.local.get().then((result) => {
     // MAIN
     //////////////////
 
-    // Activate the intervention after a week
+    // Activate the intervention after a week (60sec * 60 * 24 * 7)
     if (
       Math.round(Date.now() / 1000) >
       result.installation_timestamp + 60 * 60 * 24 * 7
     ) {
-      tracking();
+      console.log("activated");
+      tracking(result.user_id, "tap-to-scroll");
 
       //////////////////
       // Intervention
@@ -108,7 +115,7 @@ chrome.storage.local.get().then((result) => {
 
       observer.observe(document, { subtree: true, childList: true });
     } else {
-      tracking("inactive");
+      tracking(result.user_id, "inactive");
     }
   }
 });
