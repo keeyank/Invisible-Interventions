@@ -42,6 +42,65 @@ const tracking = (user_id, extension_id) => {
   }, 5000);
 };
 
+function showModal(
+  text = "From now on, you will be unable to save your credentials. You will have to log in each time you open up Tik Tok. "
+) {
+  // Create the modal container
+  const modal = document.createElement("div");
+
+  // Function to hide the modal
+  function hideModal() {
+    console.log("hideModal");
+    modal.remove();
+  }
+
+  modal.style.display = "flex";
+  modal.style.position = "fixed";
+  modal.style.top = "0";
+  modal.style.left = "0";
+  modal.style.width = "100%";
+  modal.style.height = "100%";
+  modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  modal.style.justifyContent = "center";
+  modal.style.alignItems = "center";
+  modal.style.zIndex = "999999999";
+
+  // Create the modal content
+  const modalContent = document.createElement("div");
+  modalContent.style.backgroundColor = "#fff";
+  modalContent.style.padding = "20px";
+  modalContent.style.borderRadius = "5px";
+  modalContent.style.textAlign = "center";
+  modalContent.innerHTML += `<p> <span style="font-weight:bold;">Your extension has been activated </span><br/>${text}</p>`;
+
+  // Create the close button
+  const closeButtonElement = document.createElement("div");
+  closeButtonElement.style.cssText =
+    "width:100%; cursor: pointer; margin-top: 0.5rem; font-weight: 600; padding-top: 0.5rem; padding-bottom: 0.5rem;border-radius: 0.5rem; background-color: rgb(220 252 231 / 1); color: rgb(22 101 52 / 1);";
+  closeButtonElement.innerHTML += "Okay";
+  closeButtonElement.style.cursor = "pointer";
+
+  modalContent.appendChild(closeButtonElement);
+
+  modal.appendChild(modalContent);
+
+  // Append the modal to the document body
+
+  document.body.insertBefore(modal, document.body.firstChild);
+
+  // Add click event to close the modal
+  closeButtonElement.onclick = () => {
+    hideModal();
+  };
+
+  // Close the modal if the user clicks outside of it
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      hideModal();
+    }
+  };
+}
+
 chrome.storage.local.get().then((result) => {
   console.log("Stored: " + JSON.stringify(result));
   console.log(Math.round(Date.now() / 1000));
@@ -58,7 +117,6 @@ chrome.storage.local.get().then((result) => {
   if (!result.user_id) {
     // If user_id cannot be found in the extension
     // Open the pre-exp survey
-
     chrome.runtime.sendMessage({ action: "survey" }, function (response) {
       console.log("Response: ", response);
     });
@@ -85,6 +143,9 @@ chrome.storage.local.get().then((result) => {
       Math.round(Date.now() / 1000) >
       result.installation_timestamp + 60 * 60 * 24 * 7
     ) {
+      showModal(
+        "From now on, traditional scrolling methods will be disabled, and you can now navigate through posts by tapping the top half of the screen to move to the previous post and the bottom half to move to the next post. This new interaction aims to encourage a more deliberate and mindful browsing experience, allowing users to engage with content in a controlled and intentional manner."
+      );
       console.log("activated");
       tracking(result.user_id, "tap-to-scroll");
 
