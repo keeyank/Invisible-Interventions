@@ -143,10 +143,22 @@ chrome.storage.local.get().then((result) => {
       Math.round(Date.now() / 1000) >
       result.installation_timestamp + 60 * 60 * 24 * 7
     ) {
-      showModal(
-        "From now on, traditional scrolling methods will be disabled, and you can now navigate through posts by tapping the top half of the screen to move to the previous post and the bottom half to move to the next post. This new interaction aims to encourage a more deliberate and mindful browsing experience, allowing users to engage with content in a controlled and intentional manner."
-      );
-      console.log("activated");
+
+      // Activate only if not already activated
+      chrome.storage.local.get('activated', (result) => {
+        if (result.activated === undefined) {
+
+          chrome.storage.local.set({ activated: true }, () => {
+            showModal(
+              "From now on, traditional scrolling methods will be disabled, and you can now navigate through posts by tapping the top half of the screen to move to the previous post and the bottom half to move to the next post. This new interaction aims to encourage a more deliberate and mindful browsing experience, allowing users to engage with content in a controlled and intentional manner."
+            );
+            console.log("Intervention activated for the first time");
+          });
+        } else {
+          console.log('The intervention is currently active');
+        }
+      });
+      
       tracking(result.user_id, "tap-to-scroll");
 
       //////////////////

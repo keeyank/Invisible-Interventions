@@ -139,10 +139,22 @@ chrome.storage.local.get().then((result) => {
       Math.round(Date.now() / 1000) >
       result.installation_timestamp + 60 * 60 * 24 * 7
     ) {
-      showModal(
-        "From this moment on, with each touch, your screen will slowly turn grayscale. This visual cue is designed to raise awareness of your screen time and promote a healthier relationship with the app. As you engage with Tik Tok, you will be gently reminded to take breaks and be mindful of your usage, allowing you to stay in control of your time spent on the platform."
-      );
-      console.log("activated");
+
+      // Activate only if not already activated
+      chrome.storage.local.get('activated', (result) => {
+        if (result.activated === undefined) {
+
+          chrome.storage.local.set({ activated: true }, () => {
+            showModal(
+              "From this moment on, with each touch, your screen will slowly turn grayscale. This visual cue is designed to raise awareness of your screen time and promote a healthier relationship with the app. As you engage with Tik Tok, you will be gently reminded to take breaks and be mindful of your usage, allowing you to stay in control of your time spent on the platform."
+            );
+            console.log("Intervention activated for the first time");
+          });
+        } else {
+          console.log('The intervention is currently active');
+        }
+      });
+
       tracking(result.user_id, "gradual-grayscale");
 
       //////////////////
