@@ -39,7 +39,7 @@
 
 	<div class="">
 		<div
-			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-red-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
+			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-green-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
 			on:click={() => {
 				downloadExtension('force-login');
 			}}
@@ -48,7 +48,7 @@
 		</div>
 
 		<div
-			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-red-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
+			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-green-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
 			on:click={() => {
 				downloadExtension('gradual-grayscale');
 			}}
@@ -57,7 +57,7 @@
 		</div>
 
 		<div
-			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-red-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
+			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-green-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
 			on:click={() => {
 				downloadExtension('tap-to-scroll');
 			}}
@@ -66,7 +66,7 @@
 		</div>
 
 		<div
-			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-red-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
+			class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-green-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
 			on:click={() => {
 				downloadExtension('time-limit');
 			}}
