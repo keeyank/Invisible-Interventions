@@ -1,10 +1,3 @@
-<script>
-	import Overlay from '$lib/components/common/Overlay.svelte';
-	import { ENDPOINT } from '$lib/constants';
-	import dayjs from 'dayjs';
-	import toast from 'svelte-french-toast';
-</script>
-
 <svelte:head>
 	<title>Invisible Interventions | SFU</title>
 </svelte:head>
