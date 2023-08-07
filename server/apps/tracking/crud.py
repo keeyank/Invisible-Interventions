@@ -99,7 +99,7 @@ def session_update(db: Session, usage: schemas.UsageCreate):
     result = db.execute(
         text(
             f"""
-                        SELECT id, MAX(session_end) AS max_date
+                        SELECT id, MAX(session_end) AS max_date, extension_id
                         FROM Usage
                         WHERE user_id = {usage.user_id}
                         """
@@ -115,8 +115,10 @@ def session_update(db: Session, usage: schemas.UsageCreate):
     )  # Sets to None if the query was empty
     current_dt = usage.session_end
 
-    if largest_dt != None and current_dt - largest_dt <= timedelta(
-        seconds=END_SESSION_SECONDS
+    if (
+        largest_dt != None
+        and current_dt - largest_dt <= timedelta(seconds=END_SESSION_SECONDS)
+        and row.extension_id == usage.extension_id
     ):
         # Update previous usage row from current session to reflect new end time
         stmt = (
