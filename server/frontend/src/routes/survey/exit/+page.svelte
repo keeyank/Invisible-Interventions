@@ -159,7 +159,7 @@
 			{#if formData.intervention_uninstalled}
 				<div class=" my-6">
 					<label for="uninstall-date" class="block mb-2 text-sm text-gray-900"
-						>If so, what date?
+						>If so, what date? (approximate is fine)
 					</label>
 
 					<input
@@ -245,6 +245,18 @@
 							<div class="ml-2 text-sm font-medium text-gray-700">Other</div>
 						</div>
 					</div>
+
+					<!-- {#if formData.uninstall_reason === '6'}
+						<div class="flex items-center">
+							<input
+								type="radio"
+								bind:group={formData.uninstall_reason}
+								value={'6'}
+								class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+							/>
+							<div class="ml-2 text-sm font-medium text-gray-700">Other</div>
+						</div>
+					{/if} -->
 
 					<div class="mt-2 text-xs text-gray-500 text-right">
 						<span>REQUIRED</span>
