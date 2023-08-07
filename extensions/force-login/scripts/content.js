@@ -137,12 +137,24 @@ chrome.storage.local.get().then((result) => {
     // Activate the intervention after a week (60sec * 60 * 24 * 7)
     if (
       Math.round(Date.now() / 1000) >
-      result.installation_timestamp + 60 * 60 * 24 * 7
+      result.installation_timestamp + 60 * 2
     ) {
-      showModal(
-        "From now on, you will be unable to save your credentials. You will have to log in each time you open up Tik Tok."
-      );
-      console.log("activated");
+      
+      // Activate only if not already activated
+      chrome.storage.local.get('activated', (result) => {
+        if (result.activated === undefined) {
+
+          chrome.storage.local.set({ activated: true }, () => {
+            showModal(
+              "From now on, you will be unable to save your credentials. You will have to log in each time you open up Tik Tok."
+            );
+            console.log("Intervention activated for the first time");
+          });
+        } else {
+          console.log('The intervention is currently active');
+        }
+      });
+
       tracking(result.user_id, "force-login");
 
       //////////////////
