@@ -50,7 +50,6 @@ class SurveyResponseBase(BaseModel):
     mindless_usage_frequency: str
     average_mindless_usage_duration_minutes: int
     social_media_health_impact: str
-    addiction_status: bool
 
 
 class SurveyResponseCreate(SurveyResponseBase):
@@ -80,6 +79,7 @@ class ExitSurveyResponseBase(BaseModel):
     intervention_effect: str
     perception_with_notifications: str
     habit_awareness: bool
+    future_intervention_usage_likelihood: str
     additional_comments: str
 
 

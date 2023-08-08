@@ -43,7 +43,6 @@ def create_user_and_survey_response(db: Session, user: schemas.UserWithSurveyCre
         mindless_usage_frequency=user.mindless_usage_frequency,
         average_mindless_usage_duration_minutes=user.average_mindless_usage_duration_minutes,
         social_media_health_impact=user.social_media_health_impact,
-        addiction_status=user.addiction_status,
     )
 
     print(db_survey_response)
@@ -73,6 +72,7 @@ def create_exit_survey_response(db: Session, survey: schemas.ExitSurveyResponseC
         mindless_consumption_changes=survey.mindless_consumption_changes,
         intervention_effect=survey.intervention_effect,
         perception_with_notifications=survey.perception_with_notifications,
+        future_intervention_usage_likelihood=survey.future_intervention_usage_likelihood,
         habit_awareness=survey.habit_awareness,
         additional_comments=survey.additional_comments,
     )

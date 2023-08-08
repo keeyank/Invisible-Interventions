@@ -42,7 +42,6 @@ class SurveyResponse(Base):
     mindless_usage_frequency = Column(String)
     average_mindless_usage_duration_minutes = Column(Integer)
     social_media_health_impact = Column(String)
-    addiction_status = Column(Boolean)
 
     user = relationship("User", back_populates="survey_response")
 
@@ -60,5 +59,6 @@ class ExitSurveyResponse(Base):
     mindless_consumption_changes = Column(String)
     intervention_effect = Column(String)
     perception_with_notifications = Column(String)
+    future_intervention_usage_likelihood = Column(String)
     habit_awareness = Column(Boolean)
     additional_comments = Column(String)

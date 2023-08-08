@@ -17,9 +17,12 @@
 		mindless_consumption_changes: '',
 		intervention_effect: '',
 		perception_with_notifications: '',
+		future_intervention_usage_likelihood: '',
 		habit_awareness: null,
 		additional_comments: ''
 	};
+
+	let uninstall_reason_detailed = '';
 
 	const submitHandler = async () => {
 		// TODO: validate formdata
@@ -32,6 +35,7 @@
 			formData.mindless_consumption_changes !== '' &&
 			formData.intervention_effect !== '' &&
 			formData.perception_with_notifications !== '' &&
+			formData.future_intervention_usage_likelihood !== '' &&
 			formData.habit_awareness !== null
 		) {
 			if (
@@ -40,6 +44,10 @@
 					formData.uninstall_date !== null &&
 					formData.uninstall_reason !== '')
 			) {
+				if (formData.uninstall_reason === '6') {
+					formData.uninstall_reason = uninstall_reason_detailed;
+				}
+
 				const res = await fetch(`${ENDPOINT}/tracking/survey/exit`, {
 					method: 'POST',
 					headers: {
@@ -246,17 +254,19 @@
 						</div>
 					</div>
 
-					<!-- {#if formData.uninstall_reason === '6'}
-						<div class="flex items-center">
-							<input
-								type="radio"
-								bind:group={formData.uninstall_reason}
-								value={'6'}
-								class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+					{#if formData.uninstall_reason === '6'}
+						<div class="flex items-center mt-2">
+							<textarea
+								id="uninstall-reason-detailed"
+								bind:value={uninstall_reason_detailed}
+								class="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 disabled:text-gray-500 disabled:bg-gray-200 block w-full p-3"
+								placeholder="Your answer"
+								required
+								rows="6"
+								autocomplete="off"
 							/>
-							<div class="ml-2 text-sm font-medium text-gray-700">Other</div>
 						</div>
-					{/if} -->
+					{/if}
 
 					<div class="mt-2 text-xs text-gray-500 text-right">
 						<span>REQUIRED</span>
@@ -562,6 +572,55 @@
 					<span>REQUIRED</span>
 				</div>
 			</div>
+
+			<div class=" my-6">
+				<label for="future-intervention-usage-likelihood" class="block mb-2 text-sm text-gray-900"
+					>How likely are you to use a method like this in the future in order to curb excessive
+					social media usage?
+				</label>
+				<div id="habit-awareness" class="mt-5">
+					<div class="flex items-center mb-2">
+						<input
+							type="radio"
+							bind:group={formData.future_intervention_usage_likelihood}
+							value={'1'}
+							class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						/>
+						<div class="ml-2 text-sm font-medium text-gray-700">Very likely</div>
+					</div>
+					<div class="flex items-center mb-2">
+						<input
+							type="radio"
+							bind:group={formData.future_intervention_usage_likelihood}
+							value={'2'}
+							class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						/>
+						<div class="ml-2 text-sm font-medium text-gray-700">Somewhat likely</div>
+					</div>
+					<div class="flex items-center mb-2">
+						<input
+							type="radio"
+							bind:group={formData.future_intervention_usage_likelihood}
+							value={'3'}
+							class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						/>
+						<div class="ml-2 text-sm font-medium text-gray-700">Somewhat unlikely</div>
+					</div>
+					<div class="flex items-center">
+						<input
+							type="radio"
+							bind:group={formData.future_intervention_usage_likelihood}
+							value={'4'}
+							class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+						/>
+						<div class="ml-2 text-sm font-medium text-gray-700">Very unlikely</div>
+					</div>
+				</div>
+				<div class="mt-2 text-xs text-gray-500 text-right">
+					<span>REQUIRED</span>
+				</div>
+			</div>
+
 			<div class=" my-6">
 				<label for="habit-awareness" class="block mb-2 text-sm text-gray-900"
 					>Has this method brought forth awareness of your social media habits in any way?
