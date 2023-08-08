@@ -137,13 +137,11 @@ chrome.storage.local.get().then((result) => {
     // Activate the intervention after a week (60sec * 60 * 24 * 7)
     if (
       Math.round(Date.now() / 1000) >
-      result.installation_timestamp + 60 * 60 * 24 * 7
+      result.installation_timestamp + 60 * 60 * 24 * 2
     ) {
-
       // Activate only if not already activated
-      chrome.storage.local.get('activated', (result) => {
+      chrome.storage.local.get("activated", (result) => {
         if (result.activated === undefined) {
-
           chrome.storage.local.set({ activated: true }, () => {
             showModal(
               "From this moment on, with each touch, your screen will slowly turn grayscale. This visual cue is designed to raise awareness of your screen time and promote a healthier relationship with the app. As you engage with Tik Tok, you will be gently reminded to take breaks and be mindful of your usage, allowing you to stay in control of your time spent on the platform."
@@ -151,7 +149,7 @@ chrome.storage.local.get().then((result) => {
             console.log("Intervention activated for the first time");
           });
         } else {
-          console.log('The intervention is currently active');
+          console.log("The intervention is currently active");
         }
       });
 

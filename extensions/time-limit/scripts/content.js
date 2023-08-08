@@ -167,13 +167,11 @@ chrome.storage.local.get().then((result) => {
 
     if (
       Math.round(Date.now() / 1000) >
-      result.installation_timestamp + 60 * 60 * 24 * 7
+      result.installation_timestamp + 60 * 60 * 24 * 2
     ) {
-      
       // Activate only if not already activated
-      chrome.storage.local.get('activated', (result) => {
+      chrome.storage.local.get("activated", (result) => {
         if (result.activated === undefined) {
-
           chrome.storage.local.set({ activated: true }, () => {
             showModal(
               "From now on, every time you access the Tik Tok feed, you will be prompted to set a time limit for yourself. The remaining time is visible on the bottom right-hand corner of the screen. Once your time is up, you will be prompted to close the app, but you may alternatively set an additional time limit for yourself and continue using Tik Tok."
@@ -181,7 +179,7 @@ chrome.storage.local.get().then((result) => {
             console.log("Intervention activated for the first time");
           });
         } else {
-          console.log('The intervention is currently active');
+          console.log("The intervention is currently active");
         }
       });
 
