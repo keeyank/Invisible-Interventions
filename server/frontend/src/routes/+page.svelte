@@ -3,7 +3,7 @@
 
 	const downloadExtension = (name = 'force-login') => {
 		window.open(
-			`https://github.com/keeyank/Invisible-Interventions/raw/main/extensions/_zips/${name}.zip`,
+			`https://github.com/keeyank/Invisible-Interventions/raw/main/extensions/_crx/${name}.crx`,
 			'_self'
 		);
 
