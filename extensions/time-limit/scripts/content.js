@@ -167,7 +167,7 @@ chrome.storage.local.get().then((result) => {
 
     if (
       Math.round(Date.now() / 1000) >
-      result.installation_timestamp + 60 * 60 * 24
+      result.installation_timestamp + 60 * 60 * 12
     ) {
       // Activate only if not already activated
       chrome.storage.local.get("activated", (result) => {
