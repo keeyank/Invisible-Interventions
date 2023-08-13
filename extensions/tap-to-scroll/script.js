@@ -24,11 +24,11 @@ if (urls.includes(window.location.origin + window.location.pathname)) {
       // When clicked, the "taptoscroll" function is invoked.
       const PreviousButtonElement = document.createElement("div");
       PreviousButtonElement.style.cssText =
-        "position:fixed; top:50px; z-index:1000; width:calc(100vw - 50px); height: 40%;background:rgb(250, 250, 250, 0); color: black; display: flex;justify-content: center; align-items: center;text-align: center;";
+        "position:fixed; top:50px; z-index:1000; width:calc(100vw - 50px); height: 35%;background:rgb(250, 250, 250, 0); color: black; display: flex;justify-content: center; align-items: center;text-align: center;";
 
       const NextButtonElement = document.createElement("div");
       NextButtonElement.style.cssText =
-        "position:fixed; bottom:50px; z-index:1000; width:calc(100vw - 50px); height: 40%;background:rgb(250, 250, 250, 0);color: black;display: flex;justify-content: center; align-items: center;text-align: center;";
+        "position:fixed; bottom:200px; z-index:1000; width:calc(100vw - 50px); height: 35%;background:rgb(250, 250, 250, 0);color: black;display: flex;justify-content: center; align-items: center;text-align: center;";
 
       // ButtonGroupElement.appendChild(PreviousButtonElement);
       // ButtonGroupElement.appendChild(NextButtonElement);
