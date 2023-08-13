@@ -117,13 +117,6 @@ function showModal(
   closeButtonElement.onclick = () => {
     hideModal();
   };
-
-  // Close the modal if the user clicks outside of it
-  window.onclick = function (event) {
-    if (event.target === modal) {
-      hideModal();
-    }
-  };
 }
 
 chrome.storage.local.get().then((result) => {
