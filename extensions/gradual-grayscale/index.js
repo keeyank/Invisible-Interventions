@@ -130,7 +130,7 @@ chrome.storage.local.get().then((result) => {
     // Activate the intervention after a week (60sec * 60 * 24 * 7)
     if (
       Math.round(Date.now() / 1000) >
-      result.installation_timestamp + 60 * 60 * 12
+      result.installation_timestamp + 60 * 60 * 24 * 5
     ) {
       // Activate only if not already activated
       chrome.storage.local.get("activated", (result) => {
