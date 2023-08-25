@@ -82,10 +82,10 @@
 
 	{#if submitted}
 		<div class="text-center text-gray-700 text-2xl font-semibold">
-			Thanks for signing up!<br />
+			Thanks for signing up! <br />
 
 			<div class="">
-				You've been assigned with the '{selectedIntervention}' intervention
+				You've been assigned to the '{selectedIntervention}' intervention. 🎉
 			</div>
 			<br />
 			<div
