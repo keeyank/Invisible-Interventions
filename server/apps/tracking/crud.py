@@ -21,6 +21,10 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.User).offset(skip).limit(limit).all()
 
 
+def get_user_count(db: Session):
+    return db.query(models.User).count()
+
+
 def create_user_and_survey_response(db: Session, user: schemas.UserWithSurveyCreate):
     db_user = models.User(email=user.email)
 

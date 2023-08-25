@@ -49,6 +49,12 @@ def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return users
 
 
+@app.get("/users/count", response_model=list[schemas.User])
+def get_user_count(db: Session = Depends(get_db)):
+    user_count = crud.get_user_count(db)
+    return user_count
+
+
 @app.get("/users/{user_id}", response_model=schemas.User)
 def read_user(user_id: int, db: Session = Depends(get_db)):
     db_user = crud.get_user(db, user_id=user_id)
