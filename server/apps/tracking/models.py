@@ -4,6 +4,12 @@ from sqlalchemy.orm import relationship
 from .database import Base
 
 
+class SignUpUser(Base):
+    __tablename__ = "sign_up_users"
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True)
+
+
 class User(Base):
     __tablename__ = "users"
 

@@ -2,6 +2,27 @@ from pydantic import BaseModel
 from datetime import datetime
 from typing import List, Optional
 
+#####################
+#
+# SignUpUser
+#
+#####################
+
+
+class SignUpUserBase(BaseModel):
+    email: str
+
+
+class SignUpuser(SignUpUserBase):
+    id: int
+
+    class Config:
+        orm_mode = True
+
+
+class SignUpForm(BaseModel):
+    email: str
+
 
 #####################
 #

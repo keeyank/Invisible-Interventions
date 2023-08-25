@@ -21,8 +21,21 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.User).offset(skip).limit(limit).all()
 
 
-def get_user_count(db: Session):
-    return db.query(models.User).count()
+def create_sign_up_user(db: Session, email: str):
+    db_signup_user = models.SignUpUser(email=email)
+
+    db.add(db_signup_user)
+    db.commit()
+    db.refresh(db_signup_user)
+    return db_signup_user
+
+
+def get_sign_up_user_by_email(db: Session, email: str):
+    return db.query(models.SignUpUser).filter(models.SignUpUser.email == email).first()
+
+
+def get_sign_up_user_count(db: Session):
+    return db.query(models.SignUpUser).count()
 
 
 def create_user_and_survey_response(db: Session, user: schemas.UserWithSurveyCreate):

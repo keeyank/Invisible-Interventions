@@ -49,9 +49,18 @@ def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return users
 
 
-@app.get("/users/count", response_model=int)
-def get_user_count(db: Session = Depends(get_db)):
-    user_count = crud.get_user_count(db)
+@app.post("/users/signup")
+def create_sign_up_user(form: schemas.SignUpForm, db: Session = Depends(get_db)):
+    db_sign_up_user = crud.get_sign_up_user_by_email(db, email=form.email)
+    if db_sign_up_user:
+        # If user already exists, return user
+        return db_sign_up_user
+    return crud.create_sign_up_user(db, email=form.email)
+
+
+@app.get("/users/signup/count", response_model=int)
+def get_sign_up_user_count(db: Session = Depends(get_db)):
+    user_count = crud.get_sign_up_user_count(db)
     return user_count
 
 
