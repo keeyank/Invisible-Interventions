@@ -198,7 +198,7 @@
 		<div class="mt-2 text-sm text-gray-600 break-words">
 			<a
 				class=" underline"
-				href="https://drive.google.com/file/d/1451V_0rD9lE8NiADZ80waPxIuAaBxlM8/view?usp=drive_link"
+				href="https://drive.google.com/file/d/1eb6Xb25-2LV54AeiHnM37xRnm-cEAMWy/view?usp=drive_link"
 				>Click here for a video tutorial outlining the steps below</a
 			>
 		</div>
@@ -214,7 +214,7 @@
 			</li>
 			<li>
 				On your phone, download the crx file which includes all of the extension contents from this
-				website by submitting your email address below.
+				website by submitting your email address above.
 			</li>
 
 			<li>Open the Kiwi Browser on your Android phone.</li>
