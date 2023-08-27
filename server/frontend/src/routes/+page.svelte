@@ -71,71 +71,17 @@
 		<div class="flex justify-center">
 			<img src="/sfu.png" alt="sfu logo" />
 		</div>
+		<div class="text-xl text-gray-600 font-semibold">Download Extensions</div>
 
 		<div>
-			<div class="mb-5 text-sm text-gray-600 break-words font-medium">
+			<div class="mb-5 text-sm text-gray-600 break-words">
 				Comparing Invisible Interventions with Empowering Interventions: How Can Reduced Visibility
 				or Enhanced Agency allow Users to Take Control of their Social Media Usage?
-			</div>
-		</div>
-
-		<div>
-			<div class="text-xl text-gray-600 font-semibold">Intervention Set-up Instructions</div>
-
-			<div class="mt-2 text-sm text-gray-600 break-words">
-				<a
-					class=" underline"
-					href="https://drive.google.com/file/d/1451V_0rD9lE8NiADZ80waPxIuAaBxlM8/view?usp=drive_link"
-					>Click here for a video tutorial outlining the steps below</a
-				>
-			</div>
-
-			<div class="mt-2 text-sm text-gray-700 break-words">
-				<li>Delete the Tik Tok app from your phone.</li>
-
-				<li>
-					<a
-						href="https://play.google.com/store/apps/details?id=com.kiwibrowser.browser"
-						class=" underline">Download and install the Kiwi Browser from the Google Play Store.</a
-					>
-				</li>
-				<li>
-					On your phone, download the crx file which includes all of the extension contents from
-					this website by submitting your email address below.
-				</li>
-
-				<li>Open the Kiwi Browser on your Android phone.</li>
-				<li>
-					Tap on the three vertical dots in the top-right corner to open the menu. Select
-					"Extensions" from the menu. In the Extensions menu, enable "Developer mode" by toggling
-					the switch.
-				</li>
-
-				<li>
-					Tap on "+ (from .zip/.crx/.user.js)" and navigate to the folder where you downloaded the
-					extension. Select the crx extension file and tap "OK" to install it.
-				</li>
-
-				<li>The extension should now be installed and visible in the Extensions menu.</li>
-
-				<li>
-					Open up the <a href="https://tiktok.com/" class=" underline">Tik Tok website</a> , and a pre-study
-					survey will be automatically opened. Complete this survey, and you will have officially begun
-					the study!
-				</li>
-
-				<li>
-					At this point, feel free to use the Kiwi browser with Tik Tok open as if it is the Tik Tok
-					application itself. While you use Tik Tok, we will be gathering usage data for us to
-					analyze after the study has been completed.
-				</li>
 			</div>
 		</div>
 	</div>
 
 	<hr class="my-6" />
-
-	<div class="text-xl text-gray-600 font-semibold">Download Extensions</div>
 
 	{#if submitted}
 		<div class=" my-6">
@@ -147,7 +93,7 @@
 				</div>
 				<br />
 				<div
-					class="my-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-green-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
+					class="mb-3 text-sm text-center font-semibold w-full rounded-lg py-4 px-5 text-green-800 bg-green-100 hover:bg-green-300 transition-all cursor-pointer"
 					on:click={() => {
 						downloadExtension(selectedIntervention);
 					}}
@@ -243,4 +189,58 @@
 		</div>
 	</div> -->
 	{/if}
+
+	<hr class="my-6" />
+
+	<div>
+		<div class="text-xl text-gray-600 font-semibold">Intervention Set-up Instructions</div>
+
+		<div class="mt-2 text-sm text-gray-600 break-words">
+			<a
+				class=" underline"
+				href="https://drive.google.com/file/d/1451V_0rD9lE8NiADZ80waPxIuAaBxlM8/view?usp=drive_link"
+				>Click here for a video tutorial outlining the steps below</a
+			>
+		</div>
+
+		<div class="mt-2 text-sm text-gray-700 break-words">
+			<li>Delete the Tik Tok app from your phone.</li>
+
+			<li>
+				<a
+					href="https://play.google.com/store/apps/details?id=com.kiwibrowser.browser"
+					class=" underline">Download and install the Kiwi Browser from the Google Play Store.</a
+				>
+			</li>
+			<li>
+				On your phone, download the crx file which includes all of the extension contents from this
+				website by submitting your email address below.
+			</li>
+
+			<li>Open the Kiwi Browser on your Android phone.</li>
+			<li>
+				Tap on the three vertical dots in the top-right corner to open the menu. Select "Extensions"
+				from the menu. In the Extensions menu, enable "Developer mode" by toggling the switch.
+			</li>
+
+			<li>
+				Tap on "+ (from .zip/.crx/.user.js)" and navigate to the folder where you downloaded the
+				extension. Select the crx extension file and tap "OK" to install it.
+			</li>
+
+			<li>The extension should now be installed and visible in the Extensions menu.</li>
+
+			<li>
+				Open up the <a href="https://tiktok.com/" class=" underline">Tik Tok website</a> , and a pre-study
+				survey will be automatically opened. Complete this survey, and you will have officially begun
+				the study!
+			</li>
+
+			<li>
+				At this point, feel free to use the Kiwi browser with Tik Tok open as if it is the Tik Tok
+				application itself. While you use Tik Tok, we will be gathering usage data for us to analyze
+				after the study has been completed.
+			</li>
+		</div>
+	</div>
 </div>
